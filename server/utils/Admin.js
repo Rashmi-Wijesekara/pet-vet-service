@@ -1,15 +1,23 @@
 const mongoose = require("mongoose");
-const model__admin = require("../models/admin-model")
+const model__admin = require("../models/admin-model");
+const model__adminLog = require("../models/admin-log-model")
 
 // get full admin data
-const getAllAdmins = async()=> {
+const getAllAdmins = async () => {
 	return await model__admin.find(
 		{},
-		{ id:1, name:1, phoneNo:1, email:1, dateRegistered:1, superAdmin:1}
-	)
-}
+		{
+			id: 1,
+			name: 1,
+			phoneNo: 1,
+			email: 1,
+			dateRegistered: 1,
+			superAdmin: 1,
+		}
+	);
+};
 
-const getAdminById = async(adminId) => {
+const getAdminById = async (adminId) => {
 	return await model__admin.find(
 		{ id: adminId },
 		{
@@ -21,7 +29,7 @@ const getAdminById = async(adminId) => {
 			superAdmin: 1,
 		}
 	);
-}
+};
 
 const addNewAdmin = async (add) => {
 	let admin = new model__admin({
@@ -34,7 +42,7 @@ const addNewAdmin = async (add) => {
 		password: add.password,
 	});
 
-	admin.setPassword(add.password)
+	admin.setPassword(add.password);
 
 	const emailCheck = await model__admin
 		.find({ email: add.email })
@@ -62,9 +70,54 @@ const addNewAdmin = async (add) => {
 	return admin;
 };
 
-const adminLogin = async () => {};
+const adminLogin = async (auth) => {
+	const authCheck = await model__admin.findOne(
+		{ email: auth.email }
+	);
+	
+	const password = auth.password.toString()
 
-const getAdminLog = async () => {};
+	if (authCheck === null) {
+		return "invalid email";
+	} else {
+		// valid email and password
+		if (authCheck.validPassword(password)) {
+
+			// add record to the admin log
+			const timeNow = new Date()
+
+			const log = new model__adminLog({
+				admin: authCheck,
+				loginAt: timeNow
+			})
+			try {
+				await log.save();
+			} catch (e) {
+				console.log(e);
+				return "db error";
+			}
+
+			const admin = {
+				id: authCheck.id,
+				name: authCheck.name,
+				email: authCheck.email,
+				phoneNo: authCheck.phoneNo,
+				dateRegistered: authCheck.dateRegistered,
+				superAdmin: authCheck.superAdmin
+			}
+			return admin;
+		} else {
+			return "invalid password";
+		}
+	}
+};
+
+const getAdminLog = async () => {
+	return await model__adminLog.find({}, {
+		admin: 1,
+		loginAt: 1
+	})
+};
 
 module.exports = {
 	getAllAdmins,

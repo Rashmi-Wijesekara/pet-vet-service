@@ -77,9 +77,44 @@ const addNewAdmin = (req, res, next) => {
 		});
 };
 
-const adminLogin = (req, res, next) => {};
+const adminLogin = (req, res, next) => {
+	const auth = {
+		email: req.params.email,
+		password: req.params.password
+	}
 
-const getAdminLog = (req, res, next) => {};
+	const some = service__admin
+		.adminLogin(auth)
+		.then((admin) => {
+			if (admin === "invalid email") {
+				return next(new HttpError(`Invalid email`, 422));
+			} else if (admin === "db error") {
+				return next(
+					new HttpError(`DB connection error`, 500)
+				);
+			} else if (admin === "invalid password") {
+				return next(new HttpError(`Invalid password`, 422));
+			}
+
+			return res
+				.status(201)
+				.send({ status: "OK", data: admin });
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+};
+
+const getAdminLog = (req, res) => {
+	const logs = service__admin.getAdminLog().then((log)=> {
+		res.send({
+			status: "OK",
+			data: log
+		})
+	}).catch((err)=> {
+		console.log(err)
+	})
+};
 
 module.exports = {
 	getAllAdmins,

@@ -25,9 +25,15 @@ const addNewAdmin = async (newAdmin) => {
 	return addedAdmin;
 };
 
-const adminLogin = async () => {};
+const adminLogin = async (auth) => {
+	const admin = await Admin.adminLogin(auth)
+	return admin
+};
 
-const getAdminLog = async () => {};
+const getAdminLog = async () => {
+	const log = await Admin.getAdminLog()
+	return log
+};
 
 module.exports = {
 	getAllAdmins,
