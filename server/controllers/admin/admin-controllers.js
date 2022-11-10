@@ -1,6 +1,6 @@
 const { validationResult } = require("express-validator");
-const HttpError = require("../functions/HttpError")
-const service__admin = require("../services/admin-service")
+const HttpError = require("../../functions/HttpError")
+const service__admin = require("../../services/admin/admin-service")
 
 const getAllAdmins = (req,res) => {
 	const allAdmins = service__admin.getAllAdmins().then((admins)=> {

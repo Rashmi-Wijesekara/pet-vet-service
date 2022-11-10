@@ -1,7 +1,8 @@
 const express = require("express");
 const { check } = require("express-validator");
 
-const controllers__admin = require("../controllers/admin-controllers");
+const controllers__admin = require("../controllers/admin/admin-controllers");
+const controllers__parameters = require("../controllers/admin/parameters-controllers");
 
 const router = express.Router();
 
@@ -36,6 +37,5 @@ router.get(
 	"/auth/:email/:password",
 	controllers__admin.adminLogin
 );
-
 
 module.exports = router;

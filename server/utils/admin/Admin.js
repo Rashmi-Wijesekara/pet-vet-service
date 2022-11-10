@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const model__admin = require("../models/admin-model");
-const model__adminLog = require("../models/admin-log-model")
+const model__admin = require("../../models/admin/admin-model");
+const model__adminLog = require("../../models/admin/admin-log-model")
 
 // get full admin data
 const getAllAdmins = async () => {
@@ -67,7 +67,16 @@ const addNewAdmin = async (add) => {
 		console.log(e);
 		return "db error";
 	}
-	return admin;
+	const addedOne = {
+		id: admin.id,
+		name: admin.name,
+		email: admin.email,
+		phoneNo: admin.phoneNo,
+		dateRegistered: admin.dateRegistered,
+		superAdmin: admin.superAdmin,
+	};
+	
+	return addedOne;
 };
 
 const adminLogin = async (auth) => {

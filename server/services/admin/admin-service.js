@@ -1,5 +1,5 @@
 const ID = require("nodejs-unique-numeric-id-generator");
-const Admin = require("../utils/Admin");
+const Admin = require("../../utils/admin/Admin");
 
 const getAllAdmins = async () => {
 	const allAdmins = await Admin.getAllAdmins();
