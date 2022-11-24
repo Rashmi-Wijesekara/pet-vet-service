@@ -3,6 +3,7 @@ const { check } = require("express-validator");
 
 const controllers__admin = require("../controllers/admin/admin-controllers");
 const controllers__parameters = require("../controllers/admin/parameters-controllers");
+const controllers__animals = require("../controllers/admin/animals-controllers")
 
 const router = express.Router();
 
@@ -73,5 +74,9 @@ router.post(
 	],
 	controllers__parameters.setSpecialOpenCloseTime
 );
+
+// POST api/admin/animals/
+// add a breed to the treating animals list
+router.post("/animals", [], controllers__animals.addBreed)
 
 module.exports = router;
