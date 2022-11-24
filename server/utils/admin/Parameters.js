@@ -1,9 +1,7 @@
 const mongoose = require("mongoose");
 const model__openCloseTime = require("../../models/admin/open-close-time-model")
 const model__admin = require("../../models/admin/admin-model")
-
 const database = require("../../database/database.json")
-
 
 // get the default time slot amount
 const getTimeSlot = async ()=> {
@@ -24,6 +22,7 @@ const setSpecialOpenCloseTime = async(add)=> {
 		openAt: add.openAt,
 		closeAt: add.closeAt,
 		dateCreated: add.dateCreated,
+		reason: add.reason,
 		admin: admin
 	})
 
@@ -41,6 +40,15 @@ const setSpecialOpenCloseTime = async(add)=> {
 const getOpenCloseTimeByDate = async (date)=> {
 	const defaultTime = await getOpenCloseTime()
 	
+	const result = await model__openCloseTime.find({date: date})
+	if(result.length > 0){
+		return {
+			openAt: result[0].openAt,
+			closeAt: result[0].closeAt
+		}
+	}else {
+		return defaultTime
+	}
 }
 
 module.exports = {

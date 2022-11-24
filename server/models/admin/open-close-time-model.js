@@ -6,6 +6,7 @@ const schema__openCloseTime = new Schema({
 	openAt: { type: String, required: true },
 	closeAt: { type: String, required: true },
 	dateCreated: { type: Date, required: true },
+	reason: {type: String},
 	admin: {
 		type: mongoose.Types.ObjectId,
 		required: true,

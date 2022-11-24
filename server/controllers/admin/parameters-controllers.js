@@ -91,6 +91,7 @@ const setSpecialOpenCloseTime = (req, res, next) => {
 		date: body.date,
 		openAt: body.openAt,
 		closeAt: body.closeAt,
+		reason: body.reason,
 		adminId: body.adminId
 	};
 
