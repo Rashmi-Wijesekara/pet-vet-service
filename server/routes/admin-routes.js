@@ -38,4 +38,40 @@ router.get(
 	controllers__admin.adminLogin
 );
 
+// POST api/admin/parameters/time-slot/
+// router.post("/parameters/time-slot", [check("timeSlot").not().isEmpty()], controllers__parameters.setTimeSlot)
+
+// GET api/admin/parameters/time-slot/
+// return default time slot amount in mins.
+router.get(
+	"/parameters/time-slot",
+	controllers__parameters.getTimeSlot
+);
+
+// GET api/admin/parameters/day-time/
+// return default open,close time
+router.get(
+	"/parameters/day-time",
+	controllers__parameters.getOpenCloseTime
+);
+
+// GET api/admin/parameters/day-time/:date
+// return the open,close time for the given date
+router.get(
+	"/parameters/day-time/:date",
+	controllers__parameters.getOpenCloseTimeByDate
+);
+
+// POST api/admin/parameters/day-time/
+// set the open,close time for a special date
+router.post(
+	"/parameters/day-time",
+	[
+		check("date").not().isEmpty(),
+		check("openAt").not().isEmpty(),
+		check("closeAt").not().isEmpty(),
+	],
+	controllers__parameters.setSpecialOpenCloseTime
+);
+
 module.exports = router;
