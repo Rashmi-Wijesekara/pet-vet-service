@@ -1,0 +1,7 @@
+{
+	"timeSlot": 15,
+	"defaultDayTime": {
+		"openAt": "9:00 AM",
+		"closeAt": "8:00 PM"
+	}
+}
