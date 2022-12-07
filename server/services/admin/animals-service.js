@@ -6,13 +6,19 @@ const addBreed = async (type, breeds) => {
 }
 
 const getAllAnimals = async () => {
-	const fullList = await Animals.getAllAnimals()
-	return fullList
+	const allAnimals = await Animals.getAllAnimals()
+	return allAnimals
 }
 
-const getBreedsByAnimal = async ()=> {}
+const getBreedsByAnimal = async (type)=> {
+	const breedsList = await Animals.getBreedsByAnimal(type)
+	return breedsList
+}
 
-const getFullData = async ()=> {}
+const getFullData = async ()=> {
+	const fullList = await Animals.getFullData();
+	return fullList;
+}
 
 module.exports = {
 	addBreed,

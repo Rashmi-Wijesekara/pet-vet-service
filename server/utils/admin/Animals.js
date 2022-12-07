@@ -79,7 +79,20 @@ const addBreed = async (type, breeds) => {
 	// }
 };
 
-const getAllAnimals = async () => {
+const getBreedsByAnimal = async (type) => {
+	const breedsList = await model__animal.find(
+		{type: type},
+		{ breeds: 1 }
+	);
+
+	if(breedsList.length === 1) {
+		return breedsList[0].breeds
+	}else {
+		return "invalid type"
+	}
+};
+
+const getFullData = async () => {
 	return await model__animal.find(
 		{},
 		{
@@ -89,9 +102,17 @@ const getAllAnimals = async () => {
 	);
 };
 
-const getBreedsByAnimal = async () => {};
+const getAllAnimals = async () => {
+	const fullData = await getFullData();
+	let animalsList = [];
 
-const getFullData = async () => {};
+	fullData.forEach((item) => {
+		animalsList.push(item.type);
+	});
+
+	// console.log(animalsList)
+	return animalsList;
+};
 
 module.exports = {
 	addBreed,

@@ -191,3 +191,90 @@ GET /admin/parameters/day-time/2022-11-28
     }
 }
 ```
+## get full treating animals list
+GET /admin/animals
+```
+{
+    "status": "OK",
+    "data": [
+        {
+            "_id": "639026176ee87f9a05be5819",
+            "type": "dog",
+            "breeds": [
+                "bulldog"
+            ]
+        },
+        {
+            "_id": "639028b7968803ce1cc042b0",
+            "type": "cat",
+            "breeds": [
+                "persian cat",
+                "burmese cat",
+                "birman",
+                "maine coon",
+                "ragdoll",
+                "british shorthair"
+            ]
+        }
+    ]
+}
+```
+## add new animal breed
+POST admin/animals
+```
+{
+    "type": "cat",
+    "breeds": [
+        "ragdoll",
+        "british shorthair"
+    ]
+}
+```
+```
+{
+    "status": "OK",
+    "data": [
+        {
+            "_id": "639028b7968803ce1cc042b0",
+            "type": "cat",
+            "breeds": [
+                "persian cat",
+                "burmese cat",
+                "birman",
+                "maine coon",
+                "ragdoll",
+                "british shorthair"
+            ],
+            "__v": 0
+        }
+    ]
+}
+```
+## get breeds list for the given animal type
+GET admin/animals/:type
+- localhost:5000/api/admin/animals/cat
+```
+{
+    "status": "OK",
+    "data": [
+        "persian cat",
+        "burmese cat",
+        "birman",
+        "maine coon",
+        "ragdoll",
+        "british shorthair"
+    ]
+}
+```
+## get all the animal types list
+GET admin/animals/types
+```
+{
+    "status": "OK",
+    "data": [
+        "dog",
+        "cat"
+    ]
+}
+```
+

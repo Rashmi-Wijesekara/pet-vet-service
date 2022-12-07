@@ -17,7 +17,18 @@ router.get("/admin-log", controllers__admin.getAdminLog);
 
 // GET api/admin/animals
 // return the full treating animals list
-router.get("/animals", controllers__animals.getAllAnimals)
+router.get("/animals", controllers__animals.getFullData)
+
+// GET api/admin/animals
+// return all the animal types
+router.get("/animals/types", controllers__animals.getAllAnimals)
+
+// GET api/admin/animals/:type
+// return the breeds list for the given animal type in treating animals list
+router.get(
+	"/animals/:type",
+	controllers__animals.getBreedsByAnimal
+);
 
 // GET api/admin/:adminId
 // get admin data

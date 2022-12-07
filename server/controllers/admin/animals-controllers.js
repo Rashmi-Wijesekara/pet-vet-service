@@ -33,7 +33,7 @@ const addBreed = (req, res, next) => {
 };
 
 const getAllAnimals = (req, res, next) => {
-	const fullList = service__animals
+	const allAnimals = service__animals
 		.getAllAnimals()
 		.then((result) => {
 			if (result === "db error") {
@@ -51,9 +51,48 @@ const getAllAnimals = (req, res, next) => {
 		});
 };
 
-const getBreedsByAnimal = (req, res, next) => {};
+const getBreedsByAnimal = (req, res, next) => {
+	const type = req.params.type;
+	const call = service__animals
+		.getBreedsByAnimal(type)
+		.then((result) => {
+			if (result === "db error") {
+				return next(
+					new HttpError(`DB connection error`, 500)
+				);
+			}else if(result === "invalid type"){
+				return next(
+					new HttpError(`animal type unavailable`, 422)
+				);
+			}
 
-const getFullData = (req, res, next) => {};
+			return res
+				.status(201)
+				.send({ status: "OK", data: result });
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+};
+
+const getFullData = (req, res, next) => {
+	const fullList = service__animals
+		.getFullData()
+		.then((result) => {
+			if (result === "db error") {
+				return next(
+					new HttpError(`DB connection error`, 500)
+				);
+			}
+
+			return res
+				.status(201)
+				.send({ status: "OK", data: result });
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+};
 
 module.exports = {
 	addBreed,
