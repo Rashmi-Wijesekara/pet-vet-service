@@ -77,6 +77,9 @@ router.post(
 
 // POST api/admin/animals/
 // add a breed to the treating animals list
-router.post("/animals", [], controllers__animals.addBreed)
+router.post("/animals", [
+	check("type").not().isEmpty(),
+	check("breeds").not().isEmpty(),
+], controllers__animals.addBreed)
 
 module.exports = router;
