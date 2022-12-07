@@ -9,6 +9,7 @@ const server = express();
 
 // routes
 const router__admin = require("./routes/admin-routes")
+const router__staff = require("./routes/staff-routes")
 
 let port = process.env.PORT;
 if (port == null || port == "") {
@@ -34,7 +35,7 @@ server.use((req, res, next) => {
 
 // connect routers
 server.use("/api/admin", router__admin)
-
+server.use("api/staff", router__staff)
 
 // check server configuration
 server.use("/", (req, res) => {
