@@ -26,13 +26,6 @@ const AdminHandlePopup = (props) => {
 				className={`z-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${props.visible} mx-auto bg-white font-second p-8 rounded-xl shadow-xl`}
 				id="modal"
 			>
-				<div className="text-textGrey text-md">
-					Admin ID :
-				</div>
-				<input
-					type="text"
-					className="bg-textInput w-full rounded-lg my-3 mb-5 h-10 px-3 py-2"
-				/>
 
 				<div className="text-textGrey text-md">
 					Name :
@@ -52,6 +45,14 @@ const AdminHandlePopup = (props) => {
 
 				<div className="text-textGrey text-md">
 					Phone :
+				</div>
+				<input
+					type="text"
+					className="bg-textInput w-full rounded-lg my-3 mb-5 h-10 px-3 py-2"
+				/>
+
+				<div className="text-textGrey text-md">
+					Email :
 				</div>
 				<input
 					type="text"
