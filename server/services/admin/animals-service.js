@@ -5,7 +5,10 @@ const addBreed = async (type, breeds) => {
 	return added
 }
 
-const getAllAnimals = async () => {}
+const getAllAnimals = async () => {
+	const fullList = await Animals.getAllAnimals()
+	return fullList
+}
 
 const getBreedsByAnimal = async ()=> {}
 

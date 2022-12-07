@@ -15,6 +15,10 @@ router.get("/", controllers__admin.getAllAdmins);
 // return full admin log
 router.get("/admin-log", controllers__admin.getAdminLog);
 
+// GET api/admin/animals
+// return the full treating animals list
+router.get("/animals", controllers__animals.getAllAnimals)
+
 // GET api/admin/:adminId
 // get admin data
 router.get("/:adminId", controllers__admin.getAdminById);
@@ -81,5 +85,7 @@ router.post("/animals", [
 	check("type").not().isEmpty(),
 	check("breeds").not().isEmpty(),
 ], controllers__animals.addBreed)
+
+
 
 module.exports = router;

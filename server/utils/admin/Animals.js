@@ -45,7 +45,7 @@ const addBreed = async (type, breeds) => {
 	if (addingList.length === 0) {
 		return "already available";
 	}
-	
+
 	console.log("updated breeds list ====>");
 	console.log(newBreedList);
 
@@ -77,9 +77,17 @@ const addBreed = async (type, breeds) => {
 	// if(availability === true){
 	// 	return "already available"
 	// }
-};;
+};
 
-const getAllAnimals = async () => {};
+const getAllAnimals = async () => {
+	return await model__animal.find(
+		{},
+		{
+			type: 1,
+			breeds: 1,
+		}
+	);
+};
 
 const getBreedsByAnimal = async () => {};
 

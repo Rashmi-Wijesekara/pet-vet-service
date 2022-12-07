@@ -32,7 +32,24 @@ const addBreed = (req, res, next) => {
 		});
 };
 
-const getAllAnimals = (req, res, next) => {};
+const getAllAnimals = (req, res, next) => {
+	const fullList = service__animals
+		.getAllAnimals()
+		.then((result) => {
+			if (result === "db error") {
+				return next(
+					new HttpError(`DB connection error`, 500)
+				);
+			}
+
+			return res
+				.status(201)
+				.send({ status: "OK", data: result });
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+};
 
 const getBreedsByAnimal = (req, res, next) => {};
 
