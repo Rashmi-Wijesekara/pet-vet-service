@@ -35,7 +35,7 @@ server.use((req, res, next) => {
 
 // connect routers
 server.use("/api/admin", router__admin)
-server.use("api/staff", router__staff)
+server.use("/api/staff", router__staff)
 
 // check server configuration
 server.use("/", (req, res) => {

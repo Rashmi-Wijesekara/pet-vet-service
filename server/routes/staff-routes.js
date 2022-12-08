@@ -15,17 +15,24 @@ router.get("/staff-log", controllers__staff.getStaffLog);
 
 // GET api/staff/auth/:email/:password
 // staff member login
-router.get("/auth/:email/:password", controllers__staff.staffLogin)
+router.get(
+	"/auth/:email/:password",
+	controllers__staff.staffLogin
+);
 
 // POST api/staff
 // add new staff member
-router.post("/", [
-	check("name").not().isEmpty(),
-	check("position").not().isEmpty(),
-	check("phoneNo").not().isEmpty(),
-	check("email").not().isEmpty()
-	// get password for frontdesk staff member
-], controllers__staff.addNewStaffMember);
+router.post(
+	"/",
+	[
+		check("name").not().isEmpty(),
+		check("position").not().isEmpty(),
+		check("phoneNo").not().isEmpty(),
+		check("email").not().isEmpty(),
+		// get password for frontdesk staff member
+	],
+	controllers__staff.addNewStaffMember
+);
 
 // GET api/staff/:staffId
 // get staff member data
