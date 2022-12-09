@@ -21,15 +21,19 @@ router.post(
 	controllers__client.addNewClient
 );
 
-// GET api/client/:clientId
-// get details of given client
-router.get("/:clientId", controllers__client.getClientById)
-
 // POST api/client/patients
 // add new patient for the given client
 router.post("/patients", controllers__client.addNewPatientByClientId)
 
+// GET api/client/phoneNo/:phoneNo
+// get details of the client of given phone number
+router.get("/phoneNo/:phoneNo", controllers__client.getClientByPhoneNo)
+
 // GET api/client/:clientId/patients
 router.get("/:clientId/patients", controllers__client.getPatientByClientId)
+
+// GET api/client/:clientId
+// get details of given client
+router.get("/:clientId", controllers__client.getClientById)
 
 module.exports = router;
