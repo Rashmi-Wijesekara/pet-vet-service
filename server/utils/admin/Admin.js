@@ -142,7 +142,8 @@ const getTotalCounts = async () => {
 
 	patientsCount = 0
 	doctorsCount = 0
-	
+	// TODO: valid counts get
+
 	const result = {
 		clients: clientsCount,
 		patients: patientsCount,
