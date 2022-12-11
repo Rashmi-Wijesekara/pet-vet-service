@@ -136,6 +136,7 @@ const getAdminLog = async () => {
 				loginAt: 1,
 			}
 		)
+		.sort({ loginAt: -1 })
 		.exec();
 
 	let logsData = [];
@@ -150,7 +151,7 @@ const getAdminLog = async () => {
 			)
 			.exec();
 
-		const logintime = datetime.formatDate(item.loginAt)
+		const logintime = datetime.formatDate(item.loginAt);
 
 		logsData.push({
 			admin: admin.id,

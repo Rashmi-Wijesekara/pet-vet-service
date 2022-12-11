@@ -128,24 +128,32 @@ GET /admin/admin-log
     "status": "OK",
     "data": [
         {
-            "_id": "636c73e4fc85d265fd567dbd",
-            "admin": "636bcf12fc5be3fd2ec8530b",
-            "loginAt": "2022-11-10T03:45:40.646Z"
+            "admin": "086438",
+            "loginAt": "11/10/2022 04:25 PM"
         },
         {
-            "_id": "636c79b14ca94be03fbb5c42",
-            "admin": "636bcf12fc5be3fd2ec8530b",
-            "loginAt": "2022-11-10T04:10:25.244Z"
+            "admin": "086438",
+            "loginAt": "11/10/2022 09:40 AM"
         },
         {
-            "_id": "63901b3a49f11d0e13101c47",
-            "admin": "636bcf12fc5be3fd2ec8530b",
-            "loginAt": "2022-12-07T04:48:58.075Z"
+            "admin": "086438",
+            "loginAt": "12/7/2022 10:18 AM"
         },
         {
-            "_id": "63905487f4c6cb8583f510d6",
-            "admin": "636bcf12fc5be3fd2ec8530b",
-            "loginAt": "2022-12-07T08:53:27.514Z"
+            "admin": "086438",
+            "loginAt": "11/10/2022 09:15 AM"
+        },
+        {
+            "admin": "086438",
+            "loginAt": "12/7/2022 02:23 PM"
+        },
+        {
+            "admin": "086438",
+            "loginAt": "11/10/2022 05:06 PM"
+        },
+        {
+            "admin": "099682",
+            "loginAt": "11/10/2022 05:06 PM"
         }
     ]
 }
