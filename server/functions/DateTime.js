@@ -40,8 +40,19 @@ const compare2dates = () => {
 	}
 };
 
+const formatDate = (date)=> {
+	const dateObj = new Date(date);
+	const dateformat = dateObj.toLocaleDateString();
+	const timeformat = dateObj.toLocaleTimeString([], {
+		hour: "2-digit",
+		minute: "2-digit",
+	});
+	return (dateformat + " " + timeformat)
+}
+
 module.exports = {
 	getCurrentTime,
 	getTodayDate,
-	compare2dates
+	compare2dates,
+	formatDate
 };
