@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+var crypto = require("crypto"); 
+
 const Schema = mongoose.Schema;
 
 const schema__doctor = new Schema({
