@@ -1,8 +1,13 @@
 const mongoose = require("mongoose");
+const { forEach } = require("p-iteration");
+const datetime = require("../../functions/DateTime");
+
 const model__admin = require("../../models/admin/admin-model");
 const model__adminLog = require("../../models/admin/admin-log-model");
-const model__client = require("../../models/client/client-model")
-const model__staff = require("../../models/clinic-staff/staff-model")
+const model__client = require("../../models/client/client-model");
+const model__staff = require("../../models/clinic-staff/staff-model");
+const model__patient = require("../../models/patient/patient-model");
+const model__doctor = require("../../models/doctor/doctor-model");
 
 // get full admin data
 const getAllAdmins = async () => {
@@ -123,13 +128,37 @@ const adminLogin = async (auth) => {
 };
 
 const getAdminLog = async () => {
-	return await model__adminLog.find(
-		{},
-		{
-			admin: 1,
-			loginAt: 1,
-		}
-	);
+	const logs = await model__adminLog
+		.find(
+			{},
+			{
+				admin: 1,
+				loginAt: 1,
+			}
+		)
+		.exec();
+
+	let logsData = [];
+
+	await forEach(logs, async (item) => {
+		const admin = await model__admin
+			.findById(
+				{ _id: item.admin },
+				{
+					id: 1,
+				}
+			)
+			.exec();
+
+		const logintime = datetime.formatDate(item.loginAt)
+
+		logsData.push({
+			admin: admin.id,
+			loginAt: logintime,
+		});
+	});
+
+	return logsData;
 };
 
 const getTotalCounts = async () => {
@@ -137,20 +166,16 @@ const getTotalCounts = async () => {
 
 	clientsCount = await model__client.countDocuments({});
 	staffCount = await model__staff.countDocuments({});
-	// patientsCount = await model__patient.countDocuments({});
-	// doctorsCount = await model__doctor.countDocuments({});
-
-	patientsCount = 0
-	doctorsCount = 0
-	// TODO: valid counts get
+	patientsCount = await model__patient.countDocuments({});
+	doctorsCount = await model__doctor.countDocuments({});
 
 	const result = {
 		clients: clientsCount,
 		patients: patientsCount,
-    staff: staffCount,
-		doctors: doctorsCount
-	}
-	return result
+		staff: staffCount,
+		doctors: doctorsCount,
+	};
+	return result;
 };
 
 module.exports = {
