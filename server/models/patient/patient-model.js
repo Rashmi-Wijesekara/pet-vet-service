@@ -9,7 +9,7 @@ const schema__patient = new Schema({
 	breed: { type: String, required: false },
 	dob: { type: Date, required: false },
 	dateRegistered: { type: Date, required: true },
-	client: { type: String, required: true }
+	client: { type: String, required: false }
 });
 
 module.exports = mongoose.model("Patient", schema__patient);

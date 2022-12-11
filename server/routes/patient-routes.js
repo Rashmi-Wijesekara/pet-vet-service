@@ -21,8 +21,7 @@ router.get(
 router.post(
 	"/",
 	[
-		check("type").not().isEmpty(),
-		check("client").not().isEmpty(),
+		check("type").not().isEmpty()
 	],
 	controllers__patient.addNewPatient
 );
