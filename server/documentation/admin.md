@@ -277,4 +277,17 @@ GET admin/animals/types
     ]
 }
 ```
+## total counts display in the dashboard
+GET admin/total-counts
+```
+{
+    "status": "OK",
+    "data": {
+        "clients": 3,
+        "patients": 0,
+        "staff": 2,
+        "doctors": 0
+    }
+}
+```
 

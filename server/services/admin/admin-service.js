@@ -35,10 +35,16 @@ const getAdminLog = async () => {
 	return log
 };
 
+const getTotalCounts = async ()=> {
+	const totals = await Admin.getTotalCounts()
+	return totals
+}
+
 module.exports = {
 	getAllAdmins,
 	getAdminById,
 	addNewAdmin,
 	adminLogin,
 	getAdminLog,
+	getTotalCounts
 };

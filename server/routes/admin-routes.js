@@ -15,6 +15,10 @@ router.get("/", controllers__admin.getAllAdmins);
 // return full admin log
 router.get("/admin-log", controllers__admin.getAdminLog);
 
+// GET api/admin/total-counts
+// return total patients, clients, doctors, and staff members count
+router.get("/total-counts", controllers__admin.getTotalCounts);
+
 // GET api/admin/animals
 // return the full treating animals list
 router.get("/animals", controllers__animals.getFullData)

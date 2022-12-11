@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const model__admin = require("../../models/admin/admin-model");
-const model__adminLog = require("../../models/admin/admin-log-model")
+const model__adminLog = require("../../models/admin/admin-log-model");
+const model__client = require("../../models/client/client-model")
+const model__staff = require("../../models/clinic-staff/staff-model")
 
 // get full admin data
 const getAllAdmins = async () => {
@@ -75,30 +77,29 @@ const addNewAdmin = async (add) => {
 		dateRegistered: admin.dateRegistered,
 		superAdmin: admin.superAdmin,
 	};
-	
+
 	return addedOne;
 };
 
 const adminLogin = async (auth) => {
-	const authCheck = await model__admin.findOne(
-		{ email: auth.email }
-	);
-	
-	const password = auth.password.toString()
+	const authCheck = await model__admin.findOne({
+		email: auth.email,
+	});
+
+	const password = auth.password.toString();
 
 	if (authCheck === null) {
 		return "invalid email";
 	} else {
 		// valid email and password
 		if (authCheck.validPassword(password)) {
-
 			// add record to the admin log
-			const timeNow = new Date()
+			const timeNow = new Date();
 
 			const log = new model__adminLog({
 				admin: authCheck,
-				loginAt: timeNow
-			})
+				loginAt: timeNow,
+			});
 			try {
 				await log.save();
 			} catch (e) {
@@ -112,8 +113,8 @@ const adminLogin = async (auth) => {
 				email: authCheck.email,
 				phoneNo: authCheck.phoneNo,
 				dateRegistered: authCheck.dateRegistered,
-				superAdmin: authCheck.superAdmin
-			}
+				superAdmin: authCheck.superAdmin,
+			};
 			return admin;
 		} else {
 			return "invalid password";
@@ -122,10 +123,34 @@ const adminLogin = async (auth) => {
 };
 
 const getAdminLog = async () => {
-	return await model__adminLog.find({}, {
-		admin: 1,
-		loginAt: 1
-	})
+	return await model__adminLog.find(
+		{},
+		{
+			admin: 1,
+			loginAt: 1,
+		}
+	);
+};
+
+const getTotalCounts = async () => {
+	let patientsCount, clientsCount, doctorsCount, staffCount;
+
+	clientsCount = await model__client.countDocuments({});
+	staffCount = await model__staff.countDocuments({});
+	// patientsCount = await model__patient.countDocuments({});
+	// doctorsCount = await model__doctor.countDocuments({});
+
+	patientsCount = 0
+	doctorsCount = 0
+	// TODO: valid counts get
+
+	const result = {
+		clients: clientsCount,
+		patients: patientsCount,
+    staff: staffCount,
+		doctors: doctorsCount
+	}
+	return result
 };
 
 module.exports = {
@@ -134,4 +159,5 @@ module.exports = {
 	addNewAdmin,
 	adminLogin,
 	getAdminLog,
+	getTotalCounts,
 };
