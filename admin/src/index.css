@@ -1,15 +1,15 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-  monospace;
+    monospace;
 }
 
 .searchBoxContainer {
@@ -70,16 +70,24 @@ code {
   filter: drop-shadow(0px 4px 4px rgba(94, 144, 211, 0.25));
 }
 .header {
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   width: 1136px;
   height: 45px;
   left: 300px;
   top: 0px;
+  margin: 10px 0;
+
+  /* top: 0px; */
+  /* left: 0px; */
+  /* height: 200px; */
+  /* right: 0px; */
+  /* overflow:auto; */
 
   /* filter: drop-shadow(0px 4px 4px rgba(176, 174, 174, 0.25));
 
   background-color: rgb(175, 175, 196); */
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .imgHome {
@@ -116,7 +124,8 @@ code {
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .footer {
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
 
   width: 1136px;
   height: 45px;
@@ -137,7 +146,7 @@ code {
   position: absolute;
   width: 247px;
   height: 21px;
-  left: 889px;
+  left: 880px;
   bottom: 10px;
 
   font-family: "Inter";
@@ -569,41 +578,219 @@ height: 24px; */
   overflow-y: scroll;
 }
 
-
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
 }
 
-#customers td, #customers th {
+#customers td,
+#customers th {
   border: 1px solid rgb(239, 226, 226);
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-#customers tr:hover {background-color: #ddd;}
+#customers tr:hover {
+  background-color: #ddd;
+}
 
 #customers th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #F6F7FC;
+  background-color: #f6f7fc;
   /* background: #F6F7FC; */
   color: rgb(8, 8, 8);
 }
-.scheduleCardContainer{
+/* editing 2022.12.09 */
+.scheduleCardsContainer {
   position: absolute;
-  width: 293px;
-  height: 522px;
-  left: 300px;
-  top: 85px;
-  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
-  background-color: #385c86;
+  width: 600px;
+  /* height: 902px; */
+  left: 381px;
+  top: 69px;
 
+  /* background: #f6f7fc; */
+  /* background: #feffff; */
+  /* background-color: #4c4d54; */
+  /* margin: 10px 0; */
+}
+.scheduleCard {
+  /* position: absolute; */
+  position: relative;
+  width: 740px;
+  height: 90px;
+  /* width: fit-content;
+  height: fit-content; */
+  /* padding: 0px; */
+
+  background: #ffffff;
+  box-shadow: 3px 6px 9px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  left: 98px;
+  top: 40px;
+  /* margin-inline: 0.2px; */
+  /* margin: auto; */
 }
 
+#detailCatIcon {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  left: 570px;
+  top: 3px;
+}
+.scheduleDetails {
+  position: relative;
+  width: 695px;
+  height: 37px;
+  left: 27px;
+  top: 10px;
+
+  background: #f6f7fc;
+  box-shadow: 3px 6px 9px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.detailLeft {
+  position: absolute;
+  /* width: 138px;
+  height: 18px;
+  left: 624px;
+  top: 222px; */
+
+  width: 695px;
+  height: 37px;
+  left: 27px;
+  top: 10px;
+
+  /* font-family: "Inter"; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #000000;
+}
+.detailRight {
+  position: absolute;
+  /* width: 138px;
+  height: 18px;
+  left: 624px;
+  top: 222px; */
+
+  width: 695px;
+  height: 37px;
+  left: 287px;
+  top: 10px;
+
+  /* font-family: "Inter"; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #000000;
+}
+.scheduleCardTimeHolder {
+  position: relative;
+  width: 90px;
+  height: 74px;
+  left: 0px;
+  /* top: 4px; */
+  /* top: -10px; */
+  bottom: 40px;
+
+  background: #385c86;
+  border-radius: 8px;
+}
+#time {
+  position: relative;
+  width: 81px;
+  height: 33px;
+  left: 6px;
+  top: 25px;
+
+  font-family: "Inter";
+  font-style: normal;
+  /* font-weight: 600; */
+  font-size: 15px;
+  /* line-height: 18px; */
+
+  color: #ffffff;
+}
+.scheduleDate {
+  position: absolute;
+  top: 5px;
+  width: 150px;
+  /* height: 3px; */
+}
+.animalTableContainer {
+  position: absolute;
+  /* width: 380px; */
+  width: fit-content;
+  /* height: 385px; */
+  height: fit-content;
+  left: 755px;
+  right: 5px;
+  /* top: 75px; */
+
+  /* left: 366px; */
+  top: 130px;
+  /* background: #223355; */
+
+  background: #f6f7fc;
+  box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+/* for animal table*/
+#animals {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 20px;
+}
+
+#animals td,
+#animals th {
+  border: 1px solid rgb(28, 3, 101);
+  padding: 8px;
+}
+
+/* #animals tr:nth-child(even){background-color: #f2f2f2;} */
+
+#animals tr:hover {
+  background-color: #f6f7fc;
+}
+
+#animals th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #385c86;
+  color: #f6f7fc;
+}
+/* testing animal table */
+.animalBreed {
+  /* width: 100px;
+  height: 40px; */
+}
+/* #animalType {
+  width: 100px;
+} */
+
+/* .flex {
+  display: flex;
+}
+
+.column-direction {
+  flex-direction: column;
+} */

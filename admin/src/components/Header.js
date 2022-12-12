@@ -1,6 +1,6 @@
 import React from "react";
 import HomeIcon from "../icons/home.svg";
-import NotificationIcon from "../icons/notification.svg";
+// import NotificationIcon from "../icons/notification.svg";
 import profilePicIcon from "../icons/profilePic.svg";
 
 function Header() {
@@ -10,10 +10,10 @@ function Header() {
         {/* <img src="/icons/home.svg" alt="homeicon"></img>  */}
         <img src={HomeIcon} alt="home" width="35" height="35" />
       </div>
-      <div className="notificationIcon">
-        {/* <img src="/icons/notification.svg" alt="notification"></img> */}
+      {/* <div className="notificationIcon">
+        {/* <img src="/icons/notification.svg" alt="notification"></img> }
         <img src={NotificationIcon} alt="notify" width="35" height="35" />
-      </div>
+      </div> */}
 
       <div className="profilePicIcon">
         {/* <img src="/icons/profilePic.svg" alt="profilePic"></img> */}
