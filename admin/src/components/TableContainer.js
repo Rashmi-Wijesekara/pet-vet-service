@@ -1,10 +1,32 @@
 import React from "react";
 
-function TableContainer() {
+function TableContainer(props) {
+  const headings = props.headings;
+  const data = props.data;
+
   return (
     <div className="tableContainer">
       <table id="customers">
-        <tr>
+        <thead>
+          <tr>
+            {headings.map((heading) => (
+              <th key={heading}>{heading}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((dataObj) => {
+            return (
+              <tr key={dataObj}>
+                {Object.keys(dataObj).map((key) => (
+                  <td key={key}>{dataObj[key]}</td>
+                ))}
+              </tr>
+            );
+          })}
+        </tbody>
+
+        {/* <tr>
           <th>ID</th>
           <th>Name</th>
           <th>Position</th>
@@ -63,10 +85,7 @@ function TableContainer() {
           <td>Thisurika De Silva</td>
           <td>Admin</td>
           <td>0772294758</td>
-        </tr>
-        
-       
-        
+        </tr> */}
       </table>
     </div>
   );

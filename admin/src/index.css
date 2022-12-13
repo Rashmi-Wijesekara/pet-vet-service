@@ -76,9 +76,9 @@ code {
 .header {
   /* position: absolute; */
   position: fixed;
-  width: 1136px;
+  width: 1186px;
   height: 45px;
-  left: 300px;
+  left: 252px;
   top: 0px;
   margin: 10px 0;
 
@@ -131,9 +131,10 @@ code {
   /* position: absolute; */
   position: fixed;
 
-  width: 1136px;
+  width: 1186px;
+  /* width: fit-content; */
   height: 45px;
-  left: 300px;
+  left: 252px;
   bottom: 0px;
 
   /*
@@ -573,9 +574,10 @@ height: 24px; */
 }
 .tableContainer {
   position: absolute;
-  width: 743px;
+  width: 778px;
+  /* width: fit-content; */
   height: 300px;
-  left: 366px;
+  left: 316px;
   top: 80px;
 
   /* height: 200px; */
@@ -615,10 +617,12 @@ height: 24px; */
 /* editing 2022.12.09 */
 .scheduleCardsContainer {
   position: absolute;
-  width: 600px;
+  width: 880px;
   /* height: 902px; */
+  height: 550px;
   left: 381px;
   top: 69px;
+  overflow:scroll;
 
   /* background: #f6f7fc; */
   /* background: #feffff; */
