@@ -35,6 +35,8 @@ const AdminAddForm = () => {
 					closeAddAdmin={setOpenAddAdmin}
 				/>
 			)}
+
+			
 			
 		</div>
 	);
