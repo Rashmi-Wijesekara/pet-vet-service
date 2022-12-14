@@ -41,6 +41,7 @@ import Patients from "./dashboard/pages/Patients";
 import Schedule from "./dashboard/pages/Schedule";
 import Settings from "./dashboard/pages/Settings";
 import Login from "./login/pages/Login";
+import Logout from "./dashboard/pages/Logout";
 import Dashboard from "./dashboard/pages/Dashboard";
 
 function App() {
@@ -89,6 +90,11 @@ function App() {
 					exact
 					path="/settings"
 					component={Settings}
+				/>
+				<Route
+					exact
+					path="/logout"
+					component={Logout}
 				/>
 				
 				

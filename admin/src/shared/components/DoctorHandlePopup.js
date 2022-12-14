@@ -76,7 +76,7 @@ const DoctorHandlePopup = (props) => {
 
 				<div
 					onClick={closeModalHandler}
-					className="bg-navbarBgGrey mx-auto font-second w-fit text-navbarLogoText py-1 px-6 rounded-xl my-2 cursor-pointer shadow-md hover:shadow-xl transform duration-300 active:translate-y-2"
+					className="bg-navbarBgGrey mx-auto font-second w-fit text-navbarLogoText py-2 px-6 rounded-xl my-1 cursor-pointer shadow-md hover:shadow-xl transform duration-300 active:translate-y-2"
 				>
 					Cancel
 				</div>

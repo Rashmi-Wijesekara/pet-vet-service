@@ -1,9 +1,7 @@
 import React from "react";
 
 import Navbar from "../../shared/components/Navbar";
-import Table from "../../shared/components/Table";
 import StaffAddForm from "../../shared/components/StaffAddForm";
-import * as sampleData from "../../sampleData";
 import Staff  from "../components/StaffIncharge";
 
 import {
@@ -12,8 +10,7 @@ import {
 
 
 const StaffMembers = () => {
-	const StaffTitles = sampleData.StaffTitles
-	const StaffData = sampleData.StaffData
+	
 
 
 	return (
@@ -21,15 +18,12 @@ const StaffMembers = () => {
 		<div className="flex flex-row">
 			<Navbar path="/staff-members" />
 		
-			<div className="bg-background flex-grow pl-[270px] h-full">
+			<div className="bg-background flex-grow pl-[270px] h-screen  overflow-y-auto">
                 <div className="flex flex-row mt-40">
-                    <div className="grow px-6">
-						<Table
-							titles={StaffTitles}
-							data={StaffData}
-						/>
+                    <div className="grow px-1 mb-40">
+						
 					</div>
-					<div className="flex-col items-center justify-items-center mx-10">
+					<div className="flex-col items-center justify-items-center mx-5">
 						<Staff />
 						<StaffAddForm />
 						
@@ -38,6 +32,9 @@ const StaffMembers = () => {
 				</div>
 			</div>
 		</div>
+
+		
+
 		</Router>
 	);
 };

@@ -1,8 +1,7 @@
 import React from "react";
 
 import Navbar from "../../shared/components/Navbar";
-import Table from "../../shared/components/Table";
-import * as sampleData from "../../sampleData";
+
 import Client  from "../components/ClientDetails";
 
 import {
@@ -10,9 +9,8 @@ import {
 } from "react-router-dom";
 
 
-const Doctors = () => {
-	const ClientTitles = sampleData.ClientTitles
-	const ClientData = sampleData.ClientData
+const Clients = () => {
+	
 
 
 	return (
@@ -20,13 +18,10 @@ const Doctors = () => {
 		<div className="flex flex-row">
 			<Navbar path="/clients" />
 		
-			<div className="bg-background flex-grow pl-[270px] h-full">
+			<div className="bg-background flex-grow pl-[270px] h-screen  overflow-y-auto">
                 <div className="flex flex-row mt-40">
-                    <div className="grow px-6">
-						<Table
-							titles={ClientTitles}
-							data={ClientData}
-						/>
+                    <div className="grow px-1 mb-40">
+						
 					</div>
 					<div className="flex-col items-center justify-items-center mx-10">
 						<Client />
@@ -35,8 +30,11 @@ const Doctors = () => {
 				</div>
 			</div>
 		</div>
+
+		
+
 		</Router>
 	);
 };
 
-export default Doctors;
+export default Clients;

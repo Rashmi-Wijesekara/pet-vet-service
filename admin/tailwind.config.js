@@ -7,7 +7,7 @@ module.exports = {
 				main: ["Montserrat", "sans-serif"],
 				second: ["Inter", "sans-serif"],
 				logoText: ["Public Sans", "sans-serif"],
-				navbarText: ["Manrope", "sans-serif"],
+				navbarText: ["Poppins", "sans-serif"],
 			},
 
 			colors: {

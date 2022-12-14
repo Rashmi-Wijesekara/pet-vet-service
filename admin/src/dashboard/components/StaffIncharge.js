@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ReactComponent as AdminProfile } from "../../assets/icons/newAdmin.svg";
+import { ReactComponent as AdminProfile } from "../../assets/icons/staffCard.svg";
 
 const StaffIncharge = () => {
 
@@ -10,7 +10,7 @@ const StaffIncharge = () => {
 		<div className="font-main">
 			<div className="bg-white shadow-lg rounded-xl mx-10 pb-2">
 				<div className="flex flex-col">
-					<AdminProfile className="mx-auto w-[100px] -my-2" />
+					<AdminProfile className="mx-auto w-[100px] -my-1" />
 					<div className="font-main w-fit mx-20">
 						<div className="font-bold">
 							<li>ID</li>
@@ -21,6 +21,7 @@ const StaffIncharge = () => {
 							<li>Registered Date</li>
 						</div>
 						
+
 					</div>
 				</div>
 			</div>
