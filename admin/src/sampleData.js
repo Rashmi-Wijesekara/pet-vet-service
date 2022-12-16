@@ -839,7 +839,7 @@ export const ADMINS_DATA = {
   DATA: [
     {
       id: "1",
-    //   adminId: "000294392",
+      //   adminId: "000294392",
       name: "M.R. Wijesinghe",
       post: "Super Admin",
       phoneNo: "0778435221",
@@ -848,7 +848,7 @@ export const ADMINS_DATA = {
     },
     {
       id: "2",
-    //   adminId: "000294387",
+      //   adminId: "000294387",
       name: "M.C. Wijesekara",
       post: "Admin",
       phoneNo: "0722375621",
@@ -857,7 +857,7 @@ export const ADMINS_DATA = {
     },
     {
       id: "3",
-    //   adminId: "E0067",
+      //   adminId: "E0067",
       name: "M.Rohan Perera",
       post: "Admin",
       phoneNo: "0778455523",
@@ -866,7 +866,7 @@ export const ADMINS_DATA = {
     },
     {
       id: "3",
-    //   admineId: "000294387",
+      //   admineId: "000294387",
       name: "M.R. Wijesekara",
       post: "Admin",
       phoneNo: "0722375621",
@@ -875,7 +875,7 @@ export const ADMINS_DATA = {
     },
     {
       id: "4",
-    //   adminId: "000294387",
+      //   adminId: "000294387",
       name: "M.R. Wijesekara",
       post: "Admin",
       phoneNo: "0722375621",
@@ -884,7 +884,7 @@ export const ADMINS_DATA = {
     },
     {
       id: "5",
-    //   adminId: "000294387",
+      //   adminId: "000294387",
       name: "M.R. Wijesekara",
       post: "Admin",
       phoneNo: "0722375621",
@@ -893,7 +893,7 @@ export const ADMINS_DATA = {
     },
     {
       id: "6",
-    //   adminId: "000294387",
+      //   adminId: "000294387",
       name: "M.R. Wijesekara",
       post: "Admin",
       phoneNo: "0722375621",
@@ -902,7 +902,7 @@ export const ADMINS_DATA = {
     },
     {
       id: "7",
-    //   adminId: "000294387",
+      //   adminId: "000294387",
       name: "M.R. Wijesekara",
       post: "Admin",
       phoneNo: "0722375621",
@@ -911,7 +911,7 @@ export const ADMINS_DATA = {
     },
     {
       id: "8",
-    //   adminId: "000294387",
+      //   adminId: "000294387",
       name: "M.R. Wijesekara",
       post: "Admin",
       phoneNo: "0722375621",
@@ -920,7 +920,43 @@ export const ADMINS_DATA = {
     },
     {
       id: "9",
-    //   adminId: "000294387",
+      //   adminId: "000294387",
+      name: "M.R. Wijesekara",
+      post: "Admin",
+      phoneNo: "0722375621",
+      email: "pereram@gmail.com",
+      regDate: "2022-10-30",
+    },
+    {
+      id: "10",
+      //   adminId: "000294387",
+      name: "M.R. Wijesekara",
+      post: "Admin",
+      phoneNo: "0722375621",
+      email: "pereram@gmail.com",
+      regDate: "2022-10-30",
+    },
+    {
+      id: "11",
+      //   adminId: "000294387",
+      name: "M.R. Wijesekara",
+      post: "Admin",
+      phoneNo: "0722375621",
+      email: "pereram@gmail.com",
+      regDate: "2022-10-30",
+    },
+    {
+      id: "12",
+      //   adminId: "000294387",
+      name: "M.R. Wijesekara",
+      post: "Admin",
+      phoneNo: "0722375621",
+      email: "pereram@gmail.com",
+      regDate: "2022-10-30",
+    },
+    {
+      id: "13",
+      //   adminId: "000294387",
       name: "M.R. Wijesekara",
       post: "Admin",
       phoneNo: "0722375621",
