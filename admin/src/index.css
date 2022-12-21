@@ -1,13 +1,808 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace; */
 }
+
+.searchBoxContainer {
+  position: absolute;
+  width: 257px;
+  height: 214px;
+  left: 1142px;
+  top: 349px;
+
+  /* White color */
+
+  background: #fcfcfc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.searchButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 15px 8px 39px;
+
+  position: absolute;
+  width: 150px;
+  height: 20px;
+  left: 23px;
+  top: 143px;
+
+  background: #385c86;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+/* .searchbtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+
+  width: 180px;
+  height: 24px;
+  background: #385c86;
+
+  /* Inside auto layout */
+
+/* flex: none;
+  order: 1;
+  flex-grow: 0;
+} */
+.text-for-search-name {
+  position: absolute;
+  width: 232px;
+  height: 46.3px;
+  left: 13px;
+  top: 68px;
+
+  filter: drop-shadow(0px 4px 4px rgba(94, 144, 211, 0.25));
+}
+.header {
+  /* position: absolute; */
+  position: fixed;
+  width: 1186px;
+  height: 45px;
+  left: 252px;
+  top: 0px;
+  margin: 0px 0px;
+
+  /* top: 0px; */
+  /* left: 0px; */
+  /* height: 200px; */
+  /* right: 0px; */
+  /* overflow:auto; */
+
+  /* filter: drop-shadow(0px 4px 4px rgba(176, 174, 174, 0.25));
+
+  background-color: rgb(175, 175, 196); */
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.imgHome {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 50px;
+  top: 4px;
+  border-radius: 50%;
+  background-color: #fcfcfc;
+
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.notificationIcon {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 870px;
+  top: 4px;
+  border-radius: 50%;
+  background-color: #fcfcfc;
+
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.profilePicIcon {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 1000px;
+  top: 4px;
+  border-radius: 50%;
+  background-color: #fcfcfc;
+
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.footer {
+  /* position: absolute; */
+  position: fixed;
+
+  width: 1186px;
+  /* width: fit-content; */
+  height: 45px;
+  left: 252px;
+  bottom: 0px;
+
+  /*
+  width: 1119px;
+  height: 43px;
+  left: 321px;*/
+  /* bottom: 0px; */
+
+  /* background-color: #385c86; */
+
+  background: rgba(56, 92, 134, 0.7);
+}
+.footer-text {
+  position: absolute;
+  width: 247px;
+  height: 21px;
+  left: 888px;
+  bottom: 10px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  /* font-size: 14px; */
+  font-size: 12px;
+  line-height: 21px;
+  /* identical to box height */
+
+  color: #fcfcfc;
+}
+.searchBox {
+  position: absolute;
+  width: 257px;
+  height: 190px;
+  left: 1100px;
+  /* left: 1157px; */
+  /* top: 749px;
+   */
+  bottom: 50px;
+  /* White color */
+  /*
+  background: #ccc1c1;
+  box-shadow: 0px 4px 4px rgba(139, 157, 162, 0.678);
+  border-radius: 15px; */
+
+  background-color: #f6f7fc;
+  /* set a round border */
+  border-radius: 20px;
+  /* set a shadow to the box */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.txtname {
+  position: absolute;
+  width: 38px;
+  height: 19px;
+  left: 32px;
+  top: 38px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+
+  /* 2nd text color */
+
+  color: #9d9eb1;
+}
+.txtareaName {
+  position: absolute;
+  width: 220px;
+  height: 36.3px;
+  left: 13px;
+  top: 68px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  background-color: #eaeaf2;
+  box-sizing: border-box;
+}
+.searchButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 15px 8px 39px;
+
+  position: absolute;
+  width: 212px;
+  height: 40px;
+  left: 23px;
+  top: 130px;
+
+  background: #385c86;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+.searchIcon {
+  width: 24px;
+  height: 24px;
+  right: 5px;
+
+  position: absolute;
+
+  left: 33px;
+  bottom: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  /* order: 0; */
+
+  flex-grow: 0;
+  /* background-color: aqua; */
+  background-color: #ffffff;
+}
+.searchtxt {
+  width: 159px;
+  height: 22px;
+
+  /* Medium 14 */
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 157% */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+.treatingPatientCardHolder {
+  position: absolute;
+  height: 211px;
+  width: 349px;
+  left: 325px;
+  top: 63px;
+  background-color: #f6f7fc;
+  /* set a round border */
+  border-radius: 20px;
+  /* set a shadow to the box */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.patientTxt {
+  position: absolute;
+  width: 159px;
+  height: 24px;
+  left: 34px;
+  top: 15px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+
+  display: flex;
+  align-items: flex-end;
+
+  color: #000000;
+}
+.patient-txt-discription {
+  position: absolute;
+  left: 34px;
+  right: 45px;
+  top: 39px;
+  /* bottom:65px; */
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 40;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.animalType {
+  position: absolute;
+  width: 78px;
+  height: 24px;
+  left: 34px;
+  top: 69px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  display: flex;
+  align-items: flex-end;
+
+  color: #000000;
+}
+.animalTypeTxtArea {
+  position: absolute;
+  width: 121px;
+  height: 24px;
+  left: 114px;
+  top: 69px;
+  background-color: #eaeaf2;
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  /* display: flex;
+  flex-direction: row;*/
+  align-items: center;
+  padding: 8px 12px;
+  gap: 10px;
+
+  border: 2px solid #ababb5;
+  border-radius: 4px;
+}
+.breed {
+  position: absolute;
+  width: 78px;
+  height: 24px;
+  left: 34px;
+  top: 112px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  display: flex;
+  align-items: flex-end;
+
+  color: #000000;
+}
+.breedTxtArea {
+  position: absolute;
+  width: 121px;
+  height: 24px;
+  left: 114px;
+  top: 112px;
+  background-color: #eaeaf2;
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  /* display: flex;
+  flex-direction: row;*/
+  align-items: center;
+  padding: 8px 12px;
+  gap: 10px;
+
+  border: 2px solid #ababb5;
+  border-radius: 4px;
+}
+.btnAdd {
+  text-align: center;
+  color: #eaeaf2;
+
+  position: absolute;
+  width: 73px;
+  height: 27px;
+  left: 214px;
+  top: 154px;
+
+  background: #385c86;
+  border-radius: 12px;
+}
+.workingHoursCardContainer {
+  position: absolute;
+  height: 311px;
+  width: 349px;
+  left: 325px;
+  /* top: 133px; */
+  bottom: 65px;
+  background-color: #f6f7fc;
+
+  /* set a round border */
+  border-radius: 20px;
+  /* set a shadow to the box */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.workingHoursTxt {
+  position: absolute;
+  width: 159px;
+  height: 24px;
+  left: 34px;
+  top: 15px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+}
+.openHours {
+  /* width: 96px;
+height: 24px; */
+  position: absolute;
+  width: 159px;
+  height: 24px;
+  left: 34px;
+  top: 38px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+}
+#openHours {
+  position: absolute;
+  width: 92px;
+  height: 24px;
+  left: 34px;
+  top: 62px;
+}
+
+.closeHour {
+  position: absolute;
+  width: 159px;
+  height: 24px;
+  left: 184px;
+  top: 38px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+#closeHour {
+  position: absolute;
+  width: 92px;
+  height: 24px;
+  left: 184px;
+  top: 62px;
+}
+#line {
+  border: 2px solid rgb(28, 3, 101);
+  border-radius: 2px;
+  margin-top: 97px;
+}
+.specialDaysTxt {
+  position: absolute;
+  width: 159px;
+  height: 24px;
+  left: 34px;
+  top: 103px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+
+  display: flex;
+  align-items: flex-end;
+
+  color: #000000;
+}
+#date {
+  position: absolute;
+  width: 92px;
+  height: 24px;
+  left: 02px;
+  top: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+.specialopenHours {
+  position: absolute;
+  width: 159px;
+  height: 24px;
+  left: 02px;
+  top: 79px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+#specialOpenHours {
+  position: absolute;
+  width: 92px;
+  height: 24px;
+  left: 02px;
+  top: 102px;
+}
+.specialcloseHour {
+  position: absolute;
+  width: 159px;
+  height: 24px;
+  left: 150px;
+  top: 79px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+#specialCloseHour {
+  position: absolute;
+  width: 92px;
+  height: 24px;
+  left: 150px;
+  top: 102px;
+}
+#btnSave {
+  text-align: center;
+  color: #eaeaf2;
+
+  position: absolute;
+  width: 73px;
+  height: 27px;
+  left: 213px;
+  top: 248px;
+
+  background: #385c86;
+  border-radius: 12px;
+}
+.tableContainer {
+  position: absolute;
+  width: 778px;
+  /* width: max-content; */
+  /* width: fit-content; */
+  /* height: 300px; */
+  height: 548px;
+  left: 260px;
+  top: 55px;
+
+  /* height: 200px; */
+  overflow-y: scroll;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#customers td,
+#customers th {
+  border: 1px solid rgb(239, 226, 226);
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f6f7fc;
+  /* background: #F6F7FC; */
+  color: rgb(8, 8, 8);
+}
+/* editing 2022.12.09 */
+.scheduleCardsContainer {
+  position: absolute;
+  width: 880px;
+  /* height: 902px; */
+  height: 550px;
+  left: 381px;
+  top: 69px;
+  overflow: scroll;
+
+  /* background: #f6f7fc; */
+  /* background: #feffff; */
+  /* background-color: #4c4d54; */
+  /* margin: 10px 0; */
+}
+.scheduleCard {
+  /* position: absolute; */
+  position: relative;
+  width: 740px;
+  height: 90px;
+  /* width: fit-content;
+  height: fit-content; */
+  /* padding: 0px; */
+
+  background: #ffffff;
+  box-shadow: 3px 6px 9px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  left: 98px;
+  top: 40px;
+  /* margin-inline: 0.2px; */
+  /* margin: auto; */
+}
+
+#detailCatIcon {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  left: 570px;
+  top: 3px;
+}
+.scheduleDetails {
+  position: relative;
+  width: 695px;
+  height: 37px;
+  left: 27px;
+  top: 10px;
+
+  background: #f6f7fc;
+  box-shadow: 3px 6px 9px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.detailLeft {
+  position: absolute;
+  /* width: 138px;
+  height: 18px;
+  left: 624px;
+  top: 222px; */
+
+  width: 695px;
+  height: 37px;
+  left: 27px;
+  top: 10px;
+
+  /* font-family: "Inter"; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #000000;
+}
+.detailRight {
+  position: absolute;
+  /* width: 138px;
+  height: 18px;
+  left: 624px;
+  top: 222px; */
+
+  width: 695px;
+  height: 37px;
+  left: 287px;
+  top: 10px;
+
+  /* font-family: "Inter"; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #000000;
+}
+.scheduleCardTimeHolder {
+  position: relative;
+  width: 90px;
+  height: 74px;
+  left: 0px;
+  /* top: 4px; */
+  /* top: -10px; */
+  bottom: 40px;
+
+  background: #385c86;
+  border-radius: 8px;
+}
+#time {
+  position: relative;
+  width: 81px;
+  height: 33px;
+  left: 6px;
+  top: 25px;
+
+  font-family: "Inter";
+  font-style: normal;
+  /* font-weight: 600; */
+  font-size: 15px;
+  /* line-height: 18px; */
+
+  color: #ffffff;
+}
+.scheduleDate {
+  position: absolute;
+  top: 5px;
+  width: 150px;
+  /* height: 3px; */
+}
+.animalTableContainer {
+  position: absolute;
+  /* width: 380px; */
+  width: fit-content;
+  /* height: 385px; */
+  height: fit-content;
+  left: 755px;
+  right: 5px;
+  /* top: 75px; */
+
+  /* left: 366px; */
+  top: 130px;
+  /* background: #223355; */
+
+  background: #f6f7fc;
+  box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+/* for animal table*/
+#animals {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 20px;
+}
+
+#animals td,
+#animals th {
+  border: 1px solid rgb(28, 3, 101);
+  padding: 8px;
+}
+
+/* #animals tr:nth-child(even){background-color: #f2f2f2;} */
+
+#animals tr:hover {
+  background-color: #f6f7fc;
+}
+
+#animals th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #385c86;
+  color: #f6f7fc;
+}
+/* testing animal table */
+.animalBreed {
+  /* width: 100px;
+  height: 40px; */
+}
+/* #animalType {
+  width: 100px;
+} */
+
+/* .flex {
+  display: flex;
+}
+
+.column-direction {
+  flex-direction: column;
+} */
