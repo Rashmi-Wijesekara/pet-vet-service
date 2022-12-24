@@ -34,7 +34,7 @@ const Form = (props) => {
 
 	return (
 		<div
-			className="bg-white  font-second rounded-xl h-fit shadow-lg py-5 px-20 mx-10"
+			className="bg-white  font-second rounded-xl h-fit drop-shadow-lg py-5 px-20 mx-10"
 		>
 			<div className="px-5 py-1">
 			     <div className="text-center text-xl font-bold">
