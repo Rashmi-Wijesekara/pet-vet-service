@@ -15,28 +15,33 @@ const Login = () => {
 	}	
 
 	return (
-		<div className="bg-background flex-grow pl-[270px] w-xl h-screen">
+		<div className="bg-background h-screen  overflow-y-auto">
 
-			
-			<div className="flex flex-col ">
-
-				<div className="mx-auto ">	
-					<div className="font-main font-semibold text-center my-5 mx-20 ">
+					<div className="font-main font-semibold text-center my-[30px] mx-15 ">
 						<div className="text-2xl text-TextTitle">Welcome to PetVet Clinic</div>
 						<div className="text-2xl mt-2 text-TextTitle">Admin Site</div>
 					</div>
-					<LoginForm loginHandler={loginHandler}/>
-				</div>
+			
+				<div className="flex-col ">
 
-					<div
-						className="bg-white max-w-sm font-second rounded-xl h-fit shadow-lg px-2 py-2 
-						transform duration-300 hover:scale-105 mb-50">
-						<LoginImage className=" mx-auto w-[200px] h-fit py-8" />
+					<div className="flex-row ">	
+					
+						<div className="flex-row ml-60">
+							<LoginForm loginHandler={loginHandler}/>
+						</div>
+						<div
+							className="flex-row bg-white max-w-sm font-second rounded-xl h-70 drop-shadow-lg px-0 py-2 my-[-330px] mx-[180px] ">
+							<LoginImage className=" mx-auto w-[350px] h-fit py-8" />
+						</div>
+						
+						
 					</div>
+
+					
 			
-			</div>
-				
-			
+				</div>
+		
+		
 		</div>
 	);
 };

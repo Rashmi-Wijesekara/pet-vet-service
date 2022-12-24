@@ -34,10 +34,9 @@ const Form = (props) => {
 
 	return (
 		<div
-			className="bg-white max-w-xl font-second rounded-xl h-fit shadow-lg py-5 
-		 transform duration-300 hover:scale-105"
+			className="bg-white  font-second rounded-xl h-fit shadow-lg py-5 px-20 mx-10"
 		>
-			<div className="px-5 py-3">
+			<div className="px-5 py-1">
 			     <div className="text-center text-xl font-bold">
 					Login
 				 </div>
@@ -50,7 +49,7 @@ const Form = (props) => {
 
 				{props.inputNames.map((input) => (
 					<div className="" key={input.id}>
-						<div className="text-textGrey">
+						<div className="text-textGrey rounded-lg">
 							{input.name}
 						</div>
 						<input
@@ -64,13 +63,17 @@ const Form = (props) => {
 					</div>
 				))}
 
-				
+
 				<div
-					className="bg-btnBlue text-center py-2 mt-5 text-white rounded-lg font-semibold 
-				cursor-pointer shadow-lg active:shadow-2xl active:translate-y-2 transform duration-300"
+					className="bg-btnBlue text-left  font-bold  text-white  py-4 px-0 
+					rounded-xl my-5 mx-20 cursor-pointer shadow-md hover:shadow-xl transform duration-300 active:translate-y-2"
 					onClick={formSubmit}
-				>
-					<div className="flex fllex-row ml-44">
+				> 
+
+				
+
+
+					<div className="flex flex-row ml-10">
 						{props.btnName}
 						<ArrowIcon />
 					</div>			
