@@ -23,14 +23,14 @@ const Doctors = () => {
       </div>
 
         <div className="bg-background flex-grow pl-[270px] h-screen overflow-y-auto">
-          <div className="flex flex-row mt-40">
+          <div className="flex flex-row mt-12">
             <div className="flex-row grow px-1 mb-40">
               <TableContainer
                 headings={DOCTORS_DATA.HEADINGS}
                 data={DOCTORS_DATA.DATA}
               />
             </div>
-            <div className="flex-col items-center justify-items-center mb-40 ">
+            <div className="flex-col items-center justify-items-center mb-60 ">
               <Doctor />
               <DoctorAddForm />
               <SearchBox />

@@ -14,15 +14,15 @@ const AdminAddForm = () => {
 	
 
 	return (
-		<div>
+		<div className="flex flex-row">
 			<div
-					className="bg-mainBlue mx-auto font-second w-fit text-navbarTextWhite py-2 px-10 rounded-xl my-10 cursor-pointer shadow-md hover:shadow-xl transform duration-300 active:translate-y-2"
+					className="bg-mainBlue mx-auto font-second w-fit text-navbarTextWhite text-s py-1 px-1 rounded-xl my-10 cursor-pointer shadow-md hover:shadow-xl transform duration-300 active:translate-y-2"
 					onClick={AdminAddHandler}
 				>
 					Add New Admin
 				</div>
 				<div
-					className="bg-mainBlue mx-auto font-second w-fit text-navbarTextWhite py-2 px-10 rounded-xl my-10 cursor-pointer shadow-md hover:shadow-xl transform duration-300 active:translate-y-2"
+					className="bg-mainBlue mx-auto font-second w-fit text-navbarTextWhite text-s py-1 px-3 rounded-xl my-10 cursor-pointer shadow-md hover:shadow-xl transform duration-300 active:translate-y-2"
 				>
 					Admin Log
 				</div>
