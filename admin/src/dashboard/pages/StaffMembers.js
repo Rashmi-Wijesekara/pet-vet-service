@@ -4,7 +4,6 @@ import Navbar from "../../shared/components/Navbar";
 import StaffAddForm from "../../shared/components/StaffAddForm";
 import Staff from "../components/StaffIncharge";
 
-import { BrowserRouter as Router } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SearchBox from "../../components/SearchBox";
@@ -14,7 +13,7 @@ import { STAFF_MEMBER_DATA } from "../../sampleData";
 const StaffMembers = () => {
 
   return (
-    <Router>
+    <>
       <div className="flex flex-row">
         <div className="flex flex-row">
           <Navbar path="/staff-members" />
@@ -45,7 +44,7 @@ const StaffMembers = () => {
       </div>
       
       <Footer />
-    </Router>
+    </>
   );
 
   // return (

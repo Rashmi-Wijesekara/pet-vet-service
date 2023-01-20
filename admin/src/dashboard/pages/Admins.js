@@ -6,16 +6,13 @@ import { ADMINS_DATA } from "../../sampleData";
 import SearchBox from "../../components/SearchBox";
 import Admin  from "../components/AdminIncharge";
 import Footer from "../../components/Footer";
-import {
-	BrowserRouter as Router,
-} from "react-router-dom";
 
 
 const Admins = () => {
 	
 	
 	return (
-		<Router>
+		<>
 			<div className="flex flex-row">
 				<Header />
 				<Navbar path="/admins" />
@@ -52,7 +49,7 @@ const Admins = () => {
 			<Footer />
 		
 		
-		</Router>
+		</>
 	);
 	
 	
