@@ -154,7 +154,7 @@ code {
   left: 888px;
   bottom: 10px;
 
-  font-family: "Inter";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   /* font-size: 14px; */
@@ -169,15 +169,10 @@ code {
   width: 257px;
   height: 190px;
   left: 1100px;
-  /* left: 1157px; */
-  /* top: 749px;
-   */
+
   bottom: 50px;
-  /* White color */
-  /*
-  background: #ccc1c1;
-  box-shadow: 0px 4px 4px rgba(139, 157, 162, 0.678);
-  border-radius: 15px; */
+
+  font-family: "Poppins";
 
   background-color: #f6f7fc;
   /* set a round border */
@@ -192,7 +187,7 @@ code {
   left: 32px;
   top: 38px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -208,7 +203,7 @@ code {
   height: 36.3px;
   left: 13px;
   top: 68px;
-
+  font-family: "Poppins";
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   background-color: #eaeaf2;
@@ -226,7 +221,7 @@ code {
   height: 40px;
   left: 23px;
   top: 130px;
-
+  font-family: "Poppins";
   background: #385c86;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
@@ -256,7 +251,7 @@ code {
 
   /* Medium 14 */
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -290,7 +285,7 @@ code {
   left: 34px;
   top: 15px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -309,7 +304,7 @@ code {
   top: 39px;
   /* bottom:65px; */
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 40;
   font-size: 14px;
@@ -329,7 +324,7 @@ code {
   left: 34px;
   top: 69px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -368,7 +363,7 @@ code {
   left: 34px;
   top: 112px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -434,7 +429,7 @@ code {
   left: 34px;
   top: 15px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -450,7 +445,7 @@ height: 24px; */
   left: 34px;
   top: 38px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -472,7 +467,7 @@ height: 24px; */
   left: 184px;
   top: 38px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -497,7 +492,7 @@ height: 24px; */
   left: 34px;
   top: 103px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -515,7 +510,7 @@ height: 24px; */
   height: 24px;
   left: 02px;
   top: 25px;
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -528,7 +523,7 @@ height: 24px; */
   left: 02px;
   top: 79px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -548,7 +543,7 @@ height: 24px; */
   left: 150px;
   top: 79px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -731,7 +726,7 @@ height: 24px; */
   left: 6px;
   top: 25px;
 
-  font-family: "Inter";
+  font-family: "Poppins";
   font-style: normal;
   /* font-weight: 600; */
   font-size: 15px;
@@ -765,7 +760,7 @@ height: 24px; */
 }
 /* for animal table*/
 #animals {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins";
   border-collapse: collapse;
   width: 100%;
   border-radius: 20px;
