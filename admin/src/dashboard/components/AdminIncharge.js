@@ -7,11 +7,11 @@ const AdminIncharge = () => {
 
 	return (
 		<div className="font-main">
-			<div className="bg-white shadow-lg rounded-xl mx-10 pb-2">
-				<div className="flex flex-col">
+			<div className="bg-white shadow-lg rounded-xl mx-5 pb-1">
+				<div className=" flex-col">
 					<AdminProfile className="mx-auto w-[100px] -my-0" />
-					<div className="font-main w-fit mx-6 my-8">
-						<div className="font-bold">
+					<div className="font-main w-fit mx-16 my-0">
+						<div className="font-bold text-xs">
 							<li>Register ID</li>
 							<li>Name</li>
 							<li>Phone No.</li>

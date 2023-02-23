@@ -9,6 +9,10 @@ const server = express();
 
 // routes
 const router__admin = require("./routes/admin-routes")
+const router__staff = require("./routes/staff-routes")
+const router__client = require("./routes/client-routes")
+const router__patient = require("./routes/patient-routes")
+const router__doctor = require("./routes/doctor-routes")
 
 let port = process.env.PORT;
 if (port == null || port == "") {
@@ -34,7 +38,10 @@ server.use((req, res, next) => {
 
 // connect routers
 server.use("/api/admin", router__admin)
-
+server.use("/api/staff", router__staff)
+server.use("/api/client", router__client)
+server.use("/api/patient", router__patient)
+server.use("/api/doctor", router__doctor)
 
 // check server configuration
 server.use("/", (req, res) => {

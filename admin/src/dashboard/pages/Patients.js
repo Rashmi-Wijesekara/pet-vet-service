@@ -4,7 +4,6 @@ import Navbar from "../../shared/components/Navbar";
 
 import Patient from "../components/PatientDetails";
 
-import { BrowserRouter as Router } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SearchBox from "../../components/SearchBox";
@@ -16,7 +15,7 @@ const Patients = () => {
   //   const PatientData = sampleData.PatientData;
 
   return (
-    <Router>
+    <>
       <div className="flex flex-row">
         <Navbar path="/patients" />
         <Header />
@@ -29,20 +28,20 @@ const Patients = () => {
         />
 
         <div className="bg-background flex-grow pl-[270px] h-screen overflow-y-auto">
-          <div className="flex flex-row mt-40">
+          <div className="flex flex-row mt-12">
             <div className="grow px-6">
               {/* <TableContainer
                 headings={PATIENTS_DATA.HEADINGS}
                 data={PATIENTS_DATA.DATA}
               /> */}
             </div>
-            <div className="flex-col items-center justify-items-center mb-40">
+            <div className="flex-col items-center justify-items-center mt-0 mb-60">
               <Patient />
             </div>
           </div>
         </div>
       </div>
-    </Router>
+    </>
   );
 };
 

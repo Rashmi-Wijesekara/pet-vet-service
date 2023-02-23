@@ -1,17 +1,20 @@
 const { validationResult } = require("express-validator");
-const HttpError = require("../../functions/HttpError")
-const service__admin = require("../../services/admin/admin-service")
+const HttpError = require("../../functions/HttpError");
+const service__admin = require("../../services/admin/admin-service");
 
-const getAllAdmins = (req,res) => {
-	const allAdmins = service__admin.getAllAdmins().then((admins)=> {
-		res.send({
-			status: "OK",
-			data: admins
+const getAllAdmins = (req, res) => {
+	const allAdmins = service__admin
+		.getAllAdmins()
+		.then((admins) => {
+			res.send({
+				status: "OK",
+				data: admins,
+			});
 		})
-	}).catch((err)=> {
-		console.log(err)
-	})
-}
+		.catch((err) => {
+			console.log(err);
+		});
+};
 
 const getAdminById = (req, res, next) => {
 	const id = req.params.adminId;
@@ -39,13 +42,13 @@ const addNewAdmin = (req, res, next) => {
 		throw new HttpError(
 			"Invalid inputs passed, please check your data",
 			422
-	);
-	
+		);
+
 	const admin = {
 		name: body.name,
 		phoneNo: body.phoneNo,
 		email: body.email,
-		password: body.password
+		password: body.password,
 	};
 
 	const some = service__admin
@@ -80,8 +83,8 @@ const addNewAdmin = (req, res, next) => {
 const adminLogin = (req, res, next) => {
 	const auth = {
 		email: req.params.email,
-		password: req.params.password
-	}
+		password: req.params.password,
+	};
 
 	const some = service__admin
 		.adminLogin(auth)
@@ -106,14 +109,31 @@ const adminLogin = (req, res, next) => {
 };
 
 const getAdminLog = (req, res) => {
-	const logs = service__admin.getAdminLog().then((log)=> {
-		res.send({
-			status: "OK",
-			data: log
+	const logs = service__admin
+		.getAdminLog()
+		.then((log) => {
+			res.send({
+				status: "OK",
+				data: log,
+			});
 		})
-	}).catch((err)=> {
-		console.log(err)
-	})
+		.catch((err) => {
+			console.log(err);
+		});
+};
+
+const getTotalCounts = (req, res) => {
+	const results = service__admin
+		.getTotalCounts()
+		.then((counts) => {
+			res.send({
+				status: "OK",
+				data: counts,
+			});
+		})
+		.catch((err) => {
+			console.log(err);
+		});
 };
 
 module.exports = {
@@ -122,4 +142,5 @@ module.exports = {
 	addNewAdmin,
 	adminLogin,
 	getAdminLog,
+	getTotalCounts,
 };

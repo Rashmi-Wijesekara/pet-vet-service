@@ -18,7 +18,7 @@ const StaffAddForm = () => {
 	return (
 		<div>
 			<div
-					className="bg-mainBlue mx-auto font-second w-fit text-navbarTextWhite py-2 px-10 rounded-xl my-10 cursor-pointer shadow-md hover:shadow-xl transform duration-300 active:translate-y-2"
+					className="bg-mainBlue mx-auto font-second w-fit text-navbarTextWhite text-s py-1 px-1 rounded-xl my-10 cursor-pointer shadow-md hover:shadow-xl transform duration-300 active:translate-y-2"
 					onClick={StaffAddHandler}
 				>
 					Add New Staff Member

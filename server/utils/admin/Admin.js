@@ -1,6 +1,13 @@
 const mongoose = require("mongoose");
+const { forEach } = require("p-iteration");
+const datetime = require("../../functions/DateTime");
+
 const model__admin = require("../../models/admin/admin-model");
-const model__adminLog = require("../../models/admin/admin-log-model")
+const model__adminLog = require("../../models/admin/admin-log-model");
+const model__client = require("../../models/client/client-model");
+const model__staff = require("../../models/clinic-staff/staff-model");
+const model__patient = require("../../models/patient/patient-model");
+const model__doctor = require("../../models/doctor/doctor-model");
 
 // get full admin data
 const getAllAdmins = async () => {
@@ -75,30 +82,29 @@ const addNewAdmin = async (add) => {
 		dateRegistered: admin.dateRegistered,
 		superAdmin: admin.superAdmin,
 	};
-	
+
 	return addedOne;
 };
 
 const adminLogin = async (auth) => {
-	const authCheck = await model__admin.findOne(
-		{ email: auth.email }
-	);
-	
-	const password = auth.password.toString()
+	const authCheck = await model__admin.findOne({
+		email: auth.email,
+	});
+
+	const password = auth.password.toString();
 
 	if (authCheck === null) {
 		return "invalid email";
 	} else {
 		// valid email and password
 		if (authCheck.validPassword(password)) {
-
 			// add record to the admin log
-			const timeNow = new Date()
+			const timeNow = new Date();
 
 			const log = new model__adminLog({
 				admin: authCheck,
-				loginAt: timeNow
-			})
+				loginAt: timeNow,
+			});
 			try {
 				await log.save();
 			} catch (e) {
@@ -112,8 +118,8 @@ const adminLogin = async (auth) => {
 				email: authCheck.email,
 				phoneNo: authCheck.phoneNo,
 				dateRegistered: authCheck.dateRegistered,
-				superAdmin: authCheck.superAdmin
-			}
+				superAdmin: authCheck.superAdmin,
+			};
 			return admin;
 		} else {
 			return "invalid password";
@@ -122,10 +128,55 @@ const adminLogin = async (auth) => {
 };
 
 const getAdminLog = async () => {
-	return await model__adminLog.find({}, {
-		admin: 1,
-		loginAt: 1
-	})
+	const logs = await model__adminLog
+		.find(
+			{},
+			{
+				admin: 1,
+				loginAt: 1,
+			}
+		)
+		.sort({ loginAt: -1 })
+		.exec();
+
+	let logsData = [];
+
+	await forEach(logs, async (item) => {
+		const admin = await model__admin
+			.findById(
+				{ _id: item.admin },
+				{
+					id: 1,
+				}
+			)
+			.exec();
+
+		const logintime = datetime.formatDate(item.loginAt);
+
+		logsData.push({
+			admin: admin.id,
+			loginAt: logintime,
+		});
+	});
+
+	return logsData;
+};
+
+const getTotalCounts = async () => {
+	let patientsCount, clientsCount, doctorsCount, staffCount;
+
+	clientsCount = await model__client.countDocuments({});
+	staffCount = await model__staff.countDocuments({});
+	patientsCount = await model__patient.countDocuments({});
+	doctorsCount = await model__doctor.countDocuments({});
+
+	const result = {
+		clients: clientsCount,
+		patients: patientsCount,
+		staff: staffCount,
+		doctors: doctorsCount,
+	};
+	return result;
 };
 
 module.exports = {
@@ -134,4 +185,5 @@ module.exports = {
 	addNewAdmin,
 	adminLogin,
 	getAdminLog,
+	getTotalCounts,
 };

@@ -6,54 +6,53 @@ import { ADMINS_DATA } from "../../sampleData";
 import SearchBox from "../../components/SearchBox";
 import Admin  from "../components/AdminIncharge";
 import Footer from "../../components/Footer";
-import {
-	BrowserRouter as Router,
-} from "react-router-dom";
 
 
 const Admins = () => {
 	
-
-
-	return (
-		<Router>
-		<div className="flex flex-row">
-      <Header />
-			<Navbar path="/admins" />
-		
-			<div className="bg-background flex-grow pl-[270px] h-screen overflow-y-auto">
-                <div className="flex flex-row mt-40">
-
-                    <div className="flex-row grow px-1 mb-40">
-						
-                      <TableContainer
-                        headings={ADMINS_DATA.HEADINGS}
-                        data={ADMINS_DATA.DATA}
-                      />
-
-					          </div>
-					
-					          <div className="flex-col items-center justify-items-center mb-40">
-						
-						          <Admin />
-						          <AdminAddForm />
-                      			  <SearchBox />
-
-					          </div>
-					
-				        </div>			
-			</div>
-
-			
-			
-		</div>
-
 	
+	return (
+		<>
+			<div className="flex flex-row">
+				<Header />
+				<Navbar path="/admins" />
+			</div>
+			
+				<div className="bg-background flex-grow pl-[270px] h-screen overflow-y-auto">
+					<div className="flex flex-row mt-12">
+
+						<div className="flex-row grow px-1 mb-40">
+							
+							<TableContainer
+								headings={ADMINS_DATA.HEADINGS}
+								data={ADMINS_DATA.DATA}
+							/>
+
+						</div>
+						
+									<div className="flex-col items-center justify-items-center mb-60">
+							
+									<Admin />
+									<AdminAddForm />
+									<SearchBox />
+
+									</div>
+						
+					</div>			
+				</div>
+
+				
+				
+			
+
+		
 			<Footer />
 		
 		
-		</Router>
+		</>
 	);
+	
+	
 };
 
 export default Admins;
