@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Navbar from "../../shared/components/Navbar";
 import StaffAddForm from "../../shared/components/StaffAddForm";
@@ -11,6 +11,11 @@ import TableContainer from "../../components/TableContainer";
 import { STAFF_MEMBER_DATA } from "../../sampleData";
 
 const StaffMembers = () => {
+  const [selectedStaffInfo, setSelectedStaffInfo] = useState({});
+
+  const onRowSelect = (data) => {
+    setSelectedStaffInfo(data);
+  };
 
   return (
     <>
@@ -20,9 +25,6 @@ const StaffMembers = () => {
           <Header />
           <SearchBox />
         </div>
-                
-        
-       
 
         <div className="bg-background flex-grow pl-[270px] h-screen overflow-y-auto">
           <div className="flex flex-row mt-12">
@@ -30,19 +32,17 @@ const StaffMembers = () => {
               <TableContainer
                 headings={STAFF_MEMBER_DATA.HEADINGS}
                 data={STAFF_MEMBER_DATA.DATA}
+                onRowSelect={onRowSelect}
               />
-              
             </div>
             <div className="flex-col items-center justify-items-center  mb-60">
-              <Staff />
+              <Staff selectedStaffInfo={selectedStaffInfo} />
               <StaffAddForm />
-             
             </div>
           </div>
-          
         </div>
       </div>
-      
+
       <Footer />
     </>
   );
@@ -55,9 +55,6 @@ const StaffMembers = () => {
   //         <Header />
   //         <SearchBox />
   //       </div>
-                
-        
-       
 
   //       <div className="bg-background flex-grow pl-[270px] h-screen overflow-y-auto">
   //         <div className="flex flex-row mt-40">
@@ -66,18 +63,18 @@ const StaffMembers = () => {
   //               headings={STAFF_MEMBER_DATA.HEADINGS}
   //               data={STAFF_MEMBER_DATA.DATA}
   //             />
-              
+
   //           </div>
   //           <div className="flex-col items-center justify-items-center  mb-60">
   //             <Staff />
   //             <StaffAddForm />
-             
+
   //           </div>
   //         </div>
-          
+
   //       </div>
   //     </div>
-      
+
   //     <Footer />
   //   </Router>
   // );
