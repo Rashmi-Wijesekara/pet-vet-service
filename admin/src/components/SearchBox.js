@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchIcon from "../icons/searchIcon.svg";
 
-function SearchBox() {
+function SearchBox({ initialData, tableData, setTableData }) {
+  const [searchText, setSearchText] = useState("");
+
+  const onSearch = () => {
+    if (!searchText) {
+      setTableData(initialData);
+      return;
+    }
+
+    let filteredData = tableData.filter((element) =>
+      element?.name?.toLowerCase()?.includes(searchText)
+    );
+    setTableData(filteredData);
+  };
+
   return (
     <div className="searchBox">
       <text className="txtname"> Name</text>
-      <textarea className="txtareaName"></textarea>
-      <button className="searchButton">
+      <textarea
+        className="txtareaName"
+        onChange={(e) => setSearchText(e.target.value)}
+        value={searchText}
+      ></textarea>
+      <button className="searchButton" onClick={onSearch}>
         <div>
           <text className="searchtxt">Search</text>
           <div className="searchIcon">
