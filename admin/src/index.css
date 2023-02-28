@@ -745,20 +745,21 @@ height: 24px; */
 }
 .animalTableContainer {
   position: absolute;
-  /* width: 380px; */
-  width: fit-content;
+  width: 320px;
+  /* width: fit-content; */
   /* height: 385px; */
   height: fit-content;
-  left: 755px;
+  left: 855px;
   right: 5px;
   /* top: 75px; */
 
   /* left: 366px; */
-  top: 130px;
+  /* top: 130px; */
+  top: 55px;
   /* background: #223355; */
 
   background: #f6f7fc;
-  box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 13px 1px rgba(7, 7, 7, 0.25);
   border-radius: 20px;
 }
 /* for animal table*/
@@ -771,14 +772,15 @@ height: 24px; */
 
 #animals td,
 #animals th {
-  border: 1px solid rgb(28, 3, 101);
-  padding: 8px;
+  border: 0.5px solid rgb(234, 231, 239);
+  padding: 14px;
 }
 
 /* #animals tr:nth-child(even){background-color: #f2f2f2;} */
 
 #animals tr:hover {
   background-color: #f6f7fc;
+  border-radius: 20px;
 }
 
 #animals th {
@@ -787,6 +789,8 @@ height: 24px; */
   text-align: left;
   background-color: #385c86;
   color: #f6f7fc;
+  padding: 14px;
+  border-radius: 10px;
 }
 /* testing animal table */
 .animalBreed {
