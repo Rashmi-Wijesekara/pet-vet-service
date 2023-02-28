@@ -587,7 +587,7 @@ export const ANIMAL_BREED_DATA = {
   ],
 };
 export const PATIENTS_DATA = {
-  HEADINGS: ["ID", "Patient ID", "Name", "Breed", "Client ID"],
+  HEADINGS: ["ID", "Type", "Name", "Breed", "Client ID"],
   DATA: [
     {
       id: "1",
@@ -777,7 +777,7 @@ export const DOCTORS_DATA = {
 };
 // cLIENTS DATA
 export const CLIENTS_DATA = {
-  HEADINGS: ["ID", "Name", "Pets", "Phone No."],
+  HEADINGS: ["ID", "Name", "Pets", "Phone No", "Address"],
   DATA: [
     {
       id: "1",
