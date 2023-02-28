@@ -11,6 +11,8 @@ import axios from "axios";
 import { ADMIN, BASE_URL } from "../../urls";
 import moment from "moment";
 
+let initialData = []
+
 const Admins = () => {
   const [admins, setAdmins] = useState([]);
   const [selectedAdminInfo, setSelectedAdminInfo] = useState({});
@@ -37,6 +39,7 @@ const Admins = () => {
           admins.push(obj);
         });
         setAdmins(admins);
+        initialData = admins
       })
       .catch((error) => {
         console.error(error);
@@ -63,7 +66,7 @@ const Admins = () => {
           <div className="flex-col items-center justify-items-center mb-60">
             <Admin selectedAdminInfo={selectedAdminInfo} />
             <AdminAddForm />
-            <SearchBox />
+            <SearchBox initialData={initialData} tableData={admins} setTableData={setAdmins} />
           </div>
         </div>
       </div>
