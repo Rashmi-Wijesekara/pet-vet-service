@@ -19,16 +19,29 @@ function SearchBox({ initialData, tableData, setTableData }) {
   return (
     <div className="searchBox">
       <text className="txtname"> Name</text>
-      <textarea
+      {/* <textarea
         className="txtareaName"
         onChange={(e) => setSearchText(e.target.value)}
         value={searchText}
-      ></textarea>
+      ></textarea> */}
+      <input
+        type="text"
+        className="txtareaName"
+        onChange={(e) => setSearchText(e.target.value)}
+        value={searchText}
+      ></input>
+
       <button className="searchButton" onClick={onSearch}>
         <div>
           <text className="searchtxt">Search</text>
           <div className="searchIcon">
-            <img src={SearchIcon} alt="search" width="24" height="24" />
+            <img
+              src={SearchIcon}
+              alt="search"
+              width="24"
+              height="24"
+              color="white"
+            />
           </div>
         </div>
       </button>

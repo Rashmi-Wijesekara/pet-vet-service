@@ -166,9 +166,10 @@ code {
 }
 .searchBox {
   position: absolute;
-  width: 257px;
+  width: 263px;
   height: 190px;
-  left: 1100px;
+  /* left: 1100px; */
+  left: 1125px;
 
   bottom: 50px;
 
@@ -199,12 +200,13 @@ code {
 }
 .txtareaName {
   position: absolute;
+  /* width: 220px; */
   width: 220px;
-  height: 36.3px;
-  left: 13px;
+  height: 36px;
+  left: 20px;
   top: 68px;
   font-family: "Poppins";
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(255, 251, 251, 0.25));
 
   background-color: #eaeaf2;
   box-sizing: border-box;
@@ -217,12 +219,13 @@ code {
   padding: 8px 15px 8px 39px;
 
   position: absolute;
-  width: 212px;
-  height: 40px;
-  left: 23px;
+  width: 220px;
+  height: 36px;
+  left: 20px;
   top: 130px;
   font-family: "Poppins";
-  background: #385c86;
+  /* background: #385c86; */
+  background: rgba(56, 92, 134, 0.7);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
 }
@@ -243,7 +246,7 @@ code {
 
   flex-grow: 0;
   /* background-color: aqua; */
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 .searchtxt {
   width: 159px;
