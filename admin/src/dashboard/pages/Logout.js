@@ -1,31 +1,21 @@
-import React, { useContext } from "react";
+import React from "react";
 import { ReactComponent as LogoutImage } from "../../assets/images/logout.svg";
 import Navbar from "../../shared/components/Navbar";
-import { AuthContext } from "../../shared/AuthContext";
 import FormCard from "../../shared/components/FormCard";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-
-import {
-	BrowserRouter as Router,
-} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 const Logout = () => {
 
-	const auth = useContext(AuthContext);
 
+	const history = useHistory();
+	
 
-	// const [login, setLogin] = 
-	// 	useState(false);
-
-	// const handleSubmit = () => {
-	// 	setLogin(true);
-	// 	history.push("/login")
-	//   }
 
 	return (
-		<Router>
+		<>
 		<div className="flex flex-row">
 			<Navbar path="/logout" />
 			<Header />
@@ -42,7 +32,7 @@ const Logout = () => {
 												text-navbarTextCol font-bold py-2 px-6 rounded-xl my-5
 												cursor-pointer shadow-md hover:shadow-xl 
 												transform duration-300 active:translate-y-2"
-												to="/dashboard">
+												onClick={()=> history.push("/dashboard")}>
 									Cancel
 								</div>
 								<div 
@@ -50,11 +40,8 @@ const Logout = () => {
 											   text-navbarTextCol font-bold py-2 px-6 rounded-xl my-5
 												cursor-pointer shadow-md hover:shadow-xl 
 												transform duration-300 active:translate-y-2"
-												onClick={auth.logout}
-												to="/login"
-									// onClick={handleSubmit}
-									// loginPathTo={"/login"}
-									// onClick={() => {handleSubmit(); setLogin(true);}}
+												
+												onClick={()=> history.push("/")}
 								>
 									Logout
 								</div>
@@ -66,7 +53,7 @@ const Logout = () => {
 
 		
 			<Footer />
-		</Router>
+		</>
 	);
 };
 

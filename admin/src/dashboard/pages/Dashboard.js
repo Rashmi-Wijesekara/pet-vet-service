@@ -3,9 +3,7 @@ import React from "react";
 import Navbar from "../../shared/components/Navbar";
 import CurrentStatus from "../components/CurrentStatus";
 
-import {
-	BrowserRouter as Router,
-} from "react-router-dom";
+
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
@@ -13,7 +11,7 @@ import Footer from "../../components/Footer";
 const Dashboard = () => {
 		
 	return (
-		<Router>
+		<>
 		<div className="flex flex-row">
 			<Navbar path="/dashboard" />
 			<Header/>
@@ -31,7 +29,7 @@ const Dashboard = () => {
 				
 			</div>			
 		</div>
-		</Router>
+		</>
 	);
 };
 

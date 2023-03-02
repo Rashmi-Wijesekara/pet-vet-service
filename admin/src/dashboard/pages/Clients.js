@@ -4,9 +4,7 @@ import Navbar from "../../shared/components/Navbar";
 
 import Client  from "../components/ClientDetails";
 
-import {
-	BrowserRouter as Router,
-} from "react-router-dom";
+
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import TableContainer from "../../components/TableContainer";
@@ -19,7 +17,7 @@ const Clients = () => {
 
 
 	return (
-		<Router>
+		<>
 		<div className="flex flex-row">
 			<Navbar path="/clients" />
 			<Header/>
@@ -44,7 +42,7 @@ const Clients = () => {
 				</div>
 			</div>
 			<Footer />
-		</Router>
+		</>
 	);
 };
 

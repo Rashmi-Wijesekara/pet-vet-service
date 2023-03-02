@@ -4,7 +4,6 @@ import Navbar from "../../shared/components/Navbar";
 import DoctorAddForm from "../../shared/components/DoctorAddForm";
 import Doctor from "../components/DoctorIncharge";
 
-import { BrowserRouter as Router } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SearchBox from "../../components/SearchBox";
@@ -16,7 +15,7 @@ const Doctors = () => {
   // const DoctorData = sampleData.DoctorData
 
   return (
-    <Router>
+    <>
       <div className="flex flex-row">
         <Navbar path="/doctors" />
         <Header />
@@ -38,7 +37,7 @@ const Doctors = () => {
           </div>
         </div>
         <Footer />
-    </Router>
+    </>
   );
 };
 
