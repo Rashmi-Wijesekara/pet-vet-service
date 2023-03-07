@@ -10,13 +10,16 @@ function TreatingPatientCard() {
         What animal types and breeds will be treated
       </text>
       {/* <div className="animaltypyContainer"> */}
+      <form>
+        <text className="animalType"> Animal Type</text>
+        {/* <textarea className="animalTypeTxtArea"> </textarea> */}
+        <input type="text" className="animalTypeTxtArea"></input>
 
-      <text className="animalType"> Animal Type</text>
-      <textarea className="animalTypeTxtArea"> </textarea>
-
-      <text className="breed"> Breed</text>
-      <textarea className="breedTxtArea"> </textarea>
-      <button className="btnAdd">Add</button>
+        <text className="breed"> Breed</text>
+        {/* <textarea className="breedTxtArea"> </textarea> */}
+        <input type="text" className="breedTxtArea"></input>
+        <button className="btnAdd">Add</button>
+      </form>
     </div>
   );
 }
