@@ -154,7 +154,7 @@ code {
   left: 888px;
   bottom: 10px;
 
-  font-family: "Inter";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   /* font-size: 14px; */
@@ -166,18 +166,14 @@ code {
 }
 .searchBox {
   position: absolute;
-  width: 257px;
+  width: 263px;
   height: 190px;
-  left: 1100px;
-  /* left: 1157px; */
-  /* top: 749px;
-   */
+  /* left: 1100px; */
+  left: 1125px;
+
   bottom: 50px;
-  /* White color */
-  /*
-  background: #ccc1c1;
-  box-shadow: 0px 4px 4px rgba(139, 157, 162, 0.678);
-  border-radius: 15px; */
+
+  font-family: "Poppins";
 
   background-color: #f6f7fc;
   /* set a round border */
@@ -192,7 +188,7 @@ code {
   left: 32px;
   top: 38px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -204,12 +200,13 @@ code {
 }
 .txtareaName {
   position: absolute;
+  /* width: 220px; */
   width: 220px;
-  height: 36.3px;
-  left: 13px;
+  height: 36px;
+  left: 20px;
   top: 68px;
-
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-family: "Poppins";
+  filter: drop-shadow(0px 4px 4px rgba(255, 251, 251, 0.25));
 
   background-color: #eaeaf2;
   box-sizing: border-box;
@@ -222,12 +219,13 @@ code {
   padding: 8px 15px 8px 39px;
 
   position: absolute;
-  width: 212px;
-  height: 40px;
-  left: 23px;
+  width: 220px;
+  height: 36px;
+  left: 20px;
   top: 130px;
-
-  background: #385c86;
+  font-family: "Poppins";
+  /* background: #385c86; */
+  background: rgba(56, 92, 134, 0.7);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
 }
@@ -248,7 +246,7 @@ code {
 
   flex-grow: 0;
   /* background-color: aqua; */
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 .searchtxt {
   width: 159px;
@@ -256,7 +254,7 @@ code {
 
   /* Medium 14 */
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -290,7 +288,7 @@ code {
   left: 34px;
   top: 15px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -309,7 +307,7 @@ code {
   top: 39px;
   /* bottom:65px; */
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 40;
   font-size: 14px;
@@ -329,7 +327,7 @@ code {
   left: 34px;
   top: 69px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -368,7 +366,7 @@ code {
   left: 34px;
   top: 112px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -434,7 +432,7 @@ code {
   left: 34px;
   top: 15px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -450,7 +448,7 @@ height: 24px; */
   left: 34px;
   top: 38px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -472,7 +470,7 @@ height: 24px; */
   left: 184px;
   top: 38px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -497,7 +495,7 @@ height: 24px; */
   left: 34px;
   top: 103px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -515,7 +513,7 @@ height: 24px; */
   height: 24px;
   left: 02px;
   top: 25px;
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -528,7 +526,7 @@ height: 24px; */
   left: 02px;
   top: 79px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -548,7 +546,7 @@ height: 24px; */
   left: 150px;
   top: 79px;
 
-  font-family: "Manrope";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -731,7 +729,7 @@ height: 24px; */
   left: 6px;
   top: 25px;
 
-  font-family: "Inter";
+  font-family: "Poppins";
   font-style: normal;
   /* font-weight: 600; */
   font-size: 15px;
@@ -747,25 +745,26 @@ height: 24px; */
 }
 .animalTableContainer {
   position: absolute;
-  /* width: 380px; */
-  width: fit-content;
+  width: 320px;
+  /* width: fit-content; */
   /* height: 385px; */
   height: fit-content;
-  left: 755px;
+  left: 855px;
   right: 5px;
   /* top: 75px; */
 
   /* left: 366px; */
-  top: 130px;
+  /* top: 130px; */
+  top: 55px;
   /* background: #223355; */
 
   background: #f6f7fc;
-  box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 13px 1px rgba(7, 7, 7, 0.25);
   border-radius: 20px;
 }
 /* for animal table*/
 #animals {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins";
   border-collapse: collapse;
   width: 100%;
   border-radius: 20px;
@@ -773,14 +772,15 @@ height: 24px; */
 
 #animals td,
 #animals th {
-  border: 1px solid rgb(28, 3, 101);
-  padding: 8px;
+  border: 0.5px solid rgb(234, 231, 239);
+  padding: 14px;
 }
 
 /* #animals tr:nth-child(even){background-color: #f2f2f2;} */
 
 #animals tr:hover {
   background-color: #f6f7fc;
+  border-radius: 20px;
 }
 
 #animals th {
@@ -789,6 +789,8 @@ height: 24px; */
   text-align: left;
   background-color: #385c86;
   color: #f6f7fc;
+  padding: 14px;
+  border-radius: 10px;
 }
 /* testing animal table */
 .animalBreed {

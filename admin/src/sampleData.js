@@ -476,9 +476,9 @@ export const STAFF_MEMBER_DATA = {
     },
     {
       id: "000002",
-      name: "Anoma Liyanage",
-      position: "Super Admin",
-      phoneNo: "0714458987",
+      name: "Sumithi Fernando",
+      position: " Admin",
+      phoneNo: "0715598987",
     },
     {
       id: "000003",
@@ -522,6 +522,24 @@ export const STAFF_MEMBER_DATA = {
       position: "Super Admin",
       phoneNo: "0714458987",
     },
+    {
+      id: "000010",
+      name: "Anoma Liyanage",
+      position: "Super Admin",
+      phoneNo: "0714458987",
+    },
+    {
+      id: "000011",
+      name: "Anoma Liyanage",
+      position: "Super Admin",
+      phoneNo: "0714458987",
+    },
+    {
+      id: "000012",
+      name: "Anoma Liyanage",
+      position: "Super Admin",
+      phoneNo: "0714458987",
+    },
   ],
 };
 export const ANIMAL_BREED_DATA = {
@@ -530,46 +548,46 @@ export const ANIMAL_BREED_DATA = {
     {
       animal_type: "Dog",
       breed: [
-        " german shepherd",
-        "bulldog",
-        "labrador retriever",
-        "golden retriever",
-        "french bullgod",
-        "siberian husky",
-        "poodle,alaskan malamute",
-        "chihuahua",
-        "border collie",
-        "afgan hound",
-        "airedale terrier",
+        "Gherman shepherd,",
+        "Bulldog,",
+        "Labrador retriever,",
+        "Golden retriever,",
+        "French bullgod,",
+        "Siberian husky,",
+        // "Poodle alaskan malamute,",
+        "Chihuahua,",
+        "Border collie,",
+        "Afgan hound,",
+        "Airedale terrier",
       ],
     },
 
     {
       animal_type: "Cat",
       breed: [
-        "persian cat",
-        "maine coon cat",
-        "ragdoll cat",
-        "birman cat",
-        "scottish fold cat",
-        "sphynx cat",
-        "siamese cat",
-        "savannah cat",
-        "himalayan cat",
-        "selkirk rex cat",
-        "abyssinian cat",
-        "oriental shorthair cat",
-        "british shorthair cat",
-        "singapura cat",
-        "bengal cat",
-        "snowshoe cat",
-        "sokoke cat",
+        "Persian cat,",
+        "Maine coon cat,",
+        "Ragdoll cat,",
+        "Birman cat,",
+        "Scottish fold cat,",
+        "Sphynx cat,",
+        "Siamese cat,",
+        "Savannah cat",
+        "Himalayan cat,",
+        "Selkirk rex cat,",
+        "Abyssinian cat,",
+        // "Oriental shorthair cat,",
+        "British shorthair cat,",
+        "Singapura cat,",
+        "Bengal cat,",
+        "Snowshoe cat,",
+        "Sokoke cat",
       ],
     },
   ],
 };
 export const PATIENTS_DATA = {
-  HEADINGS: ["ID", "Patient ID", "Name", "Breed", "Client ID"],
+  HEADINGS: ["ID", "Type", "Name", "Breed", "Client ID"],
   DATA: [
     {
       id: "1",
@@ -759,7 +777,7 @@ export const DOCTORS_DATA = {
 };
 // cLIENTS DATA
 export const CLIENTS_DATA = {
-  HEADINGS: ["ID", "Name", "Pets", "Phone No."],
+  HEADINGS: ["ID", "Name", "Pets", "Phone No", "Address"],
   DATA: [
     {
       id: "1",

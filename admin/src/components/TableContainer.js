@@ -17,7 +17,7 @@ function TableContainer(props) {
         <tbody>
           {data.map((dataObj) => {
             return (
-              <tr key={dataObj}>
+              <tr key={dataObj} onClick={() => props.onRowSelect(dataObj)}>
                 {Object.keys(dataObj).map((key) => (
                   <td key={key}>{dataObj[key]}</td>
                 ))}
