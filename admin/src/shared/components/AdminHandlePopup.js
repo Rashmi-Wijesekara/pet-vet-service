@@ -1,11 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from "axios";
+import { ADMIN, BASE_URL } from "../../urls";
+
 
 const AdminHandlePopup = (props) => {
 	const type = props.btnName
 
+	const [admin, setAdmin] = useState({
+		name:'',
+		email: '',
+		phoneNo: '',
+		password: ''
+	})
+
 	// add or remove a Admin
-	const saveAdminUpdate = () => {
+	const saveAdminUpdate = (event) => {
 		// send data back to the database
+		const {name, value} = event.target;
+
+		setAdmin(prevAdmin => {
+			return {
+				...prevAdmin,
+				[name]: value
+			}
+		})
+	}
+
+	const handleClick = (event) => {
+		event.preventDefault();
+		// console.log(admin);
+		const newAdmin = {
+			name: admin.name,
+			email: admin.email,
+			phoneNo: admin.phoneNo,
+			password: admin.password
+		}
+
+		axios.post(BASE_URL + ADMIN, newAdmin)
 	}
 
 	// close the modal when cancel button is clicked
@@ -32,22 +63,10 @@ const AdminHandlePopup = (props) => {
 				</div>
 				<input
 					type="text"
-					className="bg-textInput w-full rounded-lg my-3 mb-5 h-10 px-3 py-2"
-				/>
-
-				<div className="text-textGrey text-md">
-					Position :
-				</div>
-				<input
-					type="text"
-					className="bg-textInput w-full rounded-lg my-3 mb-5 h-10 px-3 py-2"
-				/>
-
-				<div className="text-textGrey text-md">
-					Phone :
-				</div>
-				<input
-					type="text"
+					onChange={saveAdminUpdate}
+					name= "name"
+					value={admin.name}
+					autoComplete="off"
 					className="bg-textInput w-full rounded-lg my-3 mb-5 h-10 px-3 py-2"
 				/>
 
@@ -56,11 +75,43 @@ const AdminHandlePopup = (props) => {
 				</div>
 				<input
 					type="text"
+					onChange={saveAdminUpdate}
+					name= "email"
+					value={admin.email}
+					autoComplete="off"
+					className="bg-textInput w-full rounded-lg my-3 mb-5 h-10 px-3 py-2"
+				/>	
+
+				<div className="text-textGrey text-md">
+					Phone :
+				</div>
+				<input
+					type="text"
+					onChange={saveAdminUpdate}
+					name= "phoneNo"
+					value={admin.phone}
+					autoComplete="off"
 					className="bg-textInput w-full rounded-lg my-3 mb-5 h-10 px-3 py-2"
 				/>
 
+				<div className="text-textGrey text-md">
+					Password :
+				</div>
+				<input
+					type="text"
+					onChange={saveAdminUpdate}
+					name= "password"
+					value={admin.position}
+					autoComplete="off"
+					className="bg-textInput w-full rounded-lg my-3 mb-5 h-10 px-3 py-2"
+				/>
+
+				
+
+				
+
 				<div
-					onClick={saveAdminUpdate}
+					onClick={handleClick}
 					className="bg-mainBlue mx-auto font-second w-fit text-navbarTextWhite py-3 px-10 rounded-xl my-5 cursor-pointer shadow-md hover:shadow-xl transform duration-300 active:translate-y-2"
 				>
 					Add New Admin
