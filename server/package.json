@@ -16,11 +16,12 @@
 		"express": "^4.18.2",
 		"express-validator": "^6.14.2",
 		"mongodb": "^4.11.0",
-		"mongoose": "^6.7.1",
+		"mongoose": "^6.10.2",
+		"node-modules": "^1.0.1",
 		"nodejs-unique-numeric-id-generator": "^1.0.1",
 		"p-iteration": "^1.1.8"
 	},
 	"devDependencies": {
-		"nodemon": "^2.0.20"
+		"nodemon": "^2.0.21"
 	}
 }
